@@ -1,5 +1,6 @@
 # cnbtl
-cnbtl for xx
+手足文化
+www.cdszwh.com
 
 ## 功能
 - 后台管理案列,新闻的增删改查
