@@ -11,7 +11,7 @@ public interface CaseDao {
 	 * @param mycase 我的案例
 	 * @return 是否插入成功,返回1表示成功,返回0表示失败
 	 */
-	int insert(Case mycase);
+	Integer insert(Case mycase);
 	
 	/**
 	 * 查找到某一个具体的case
@@ -41,4 +41,18 @@ public interface CaseDao {
 	 * @return 成功更新的条数.
 	 */
 	Integer updateClickPlusOne(Integer id,Integer plusNum);
+	
+	/**
+	 * 删除一个案列,通过id来查询该案例
+	 * @param id
+	 * @return
+	 */
+	Integer deleteById(Integer id);
+	
+	/**
+	 * 更新一个案例
+	 * @param case1 要更新的内容
+	 * @return 更新的记录条数
+	 */
+	Integer update(Case case1);
 }

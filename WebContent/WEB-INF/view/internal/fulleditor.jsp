@@ -26,6 +26,7 @@
 					<a class="navbar-brand" href="<%= request.getContextPath() %>/admin/main"><span>CNBTL</span>后台管理</a>
 					<ul class="user-menu">
 						<li class="dropdown pull-right">
+							<input type="hidden" id="userid" value="${user.id}">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span>欢迎您,${user.name}</span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="<%= request.getContextPath() %>/admin/logoff"><span class="glyphicon glyphicon-log-out"></span> 退出登录</a></li>
@@ -79,30 +80,86 @@
 				</div><br />
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">类别</span>
-					<select class="form-control name="type">
-						<option value="new">新闻</option>
-						<option value="case">案列</option>
+					<select class="form-control name="type" id="type">
+						<option value="brand">品牌咨询</option>
+						<option value="activity">会展活动</option>
+						<option value="design">平面设计</option>
+						<option value="movie">影视制作</option>
 					</select>
 				</div><br />
 				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">来源</span>
-					<input class="form-control type="text" name="origin" id="origin" placeholder="例如:cnbtl" />
+					<span class="input-group-addon" id="basic-addon2">来源</span>
+					<input class="form-control type="text" name="origin" id="origin" value="手足文化" disabled="disabled" />
 				</div><br />
 			</div>
-			
+			<input type="hidden" id="contextPath" value="<%= request.getContextPath()%>" />
 		    <div id="editor">
 		        <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
 		    </div>
-		    <button class="btn btn-primary" onclick="get()">保存案列</button>
+		    <!-- <button class="btn btn-primary" onclick="getHtml()">获取html</button> -->
+		    <button class="btn btn-primary" onclick="uploadHtml()">上传html</button>
 		     <script type="text/javascript">
 		        var E = window.wangEditor;
 		        var editor = new E('#editor');
 		        // 或者 var editor = new E( document.getElementById('editor') );
+		         //配置图片上传
+		        var rootPath = $('#contextPath').val();
+		        editor.customConfig.uploadImgServer = rootPath + "/upload/uploadimg";
+		        editor.customConfig.uploadFileName = "img";
+		        //alert((window.location.href).split("/cnbtl")[0] + rootPath + "/upload/uploadimg");
+		        editor.customConfig.debug = true;
+		        //事件函数,修改相对路径
+		        editor.customConfig.uploadImgHooks = {
+		        	customInsert:function (insertImg, result, editor) {
+		        		 var url = (window.location.href).split("/cnbtl")[0] + rootPath + result.data[0];
+		        		 //alert(url);
+		        	     insertImg(url);
+				    },
+				    fail:function (xhr, editor, result) {
+						if(result.errno == -1){
+							alert("服务器没有接收到图片信息!");
+						}
+					}
+				}
 		        editor.create();
-		        
-		        function get(){
-		        	alert(editor.txt.html());
-		        }
+
+
+		        //获取案列上传案列方法
+		        function getHtml(){
+			        //alert(editor.txt.html());
+			        return editor.txt.html();
+			    }
+			    function uploadHtml(){
+				    //首先获取内容,然后使用jquery的ajax发送上传请求给服务器
+				    var editor = $("#userid").val();
+				    var title = $("#title").val();
+				    var type = $("#type").val();
+				    var origin = $("#origin").val();
+				    var content = getHtml();
+				    console.log(editor+title+type+origin+content);
+				    $.ajax({
+						url:rootPath + "/case/add",
+						dataType: "json",
+						type:"post",
+						data:{
+							"editor":editor,
+							"title":title,
+							"type":type,
+							"origin":origin,
+							"content":content
+						},
+						success:function(data){
+							if(data.result === "false")
+								alert("上传出错,请检查时候完整填写!");
+							if(data.result === "true")
+								alert("上传完成!");
+						},
+						error:function(){
+							alert("上传出错了!!!!检查一下填写的内容")
+						}
+					});
+				}
 		    </script>
+		</div>
 	</body>
 </html>

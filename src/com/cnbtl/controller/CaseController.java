@@ -1,5 +1,6 @@
 package com.cnbtl.controller;
 
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,13 +8,17 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
 import com.cnbtl.entity.Case;
 import com.cnbtl.entity.extra.TitleAndDate;
 import com.cnbtl.service.CaseService;
+import com.cnbtl.util.JsonResult;
 
 /**
  * case controller 负责处理案列相关的请求
@@ -61,4 +66,106 @@ public class CaseController {
 		System.out.println("JSON-->" + rsString);
 		return rsString;
 	}
+	
+	/**
+	 * 增加一个案列
+	 * @param type 案列类型
+	 * @param title 案列标题
+	 * @param editor 编辑者的id
+	 * @param origin 来源
+	 * @param content 案列的主要内容
+	 * @return
+	 */
+	@RequestMapping(value="/add")
+	@ResponseBody
+	public String uploadCase(@RequestParam("type") String type,
+			@RequestParam("title") String title,
+			@RequestParam("editor") Integer editor,
+			@RequestParam("origin") String origin,
+			@RequestParam("content") String content){
+		if(title == null || title.equals("") || editor == null || editor.equals("")
+				|| origin == null || origin.equals("") || content == null || content.equals("")) {
+			return JsonResult.RS_FALSE;
+		}
+		Case case1 = new Case();
+		//赋值
+		case1.setClick(1);
+		case1.setDate(new Timestamp(new Date().getTime()));
+		case1.setContent(content);
+		case1.setEditor(editor);
+		case1.setOrigin(origin);
+		case1.setTitle(title);
+		case1.setType(type);
+		//保存操作
+		System.out.println(case1);
+		if(caseService.saveOneCase(case1))
+			return JsonResult.RS_TRUE;
+		return JsonResult.RS_FALSE;
+	}
+	
+	/**
+	 * 删除一个案列
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
+	@ResponseBody
+	public String deleteCase(@PathVariable("id")Integer id) {
+		boolean rs = caseService.deleteOneCaseById(id);
+		if(rs)
+			return JsonResult.RS_TRUE;
+		return JsonResult.RS_FALSE;
+	}
+	
+	/**
+	 * 修改一个案列
+	 * @param type 类型
+	 * @param title 标题
+	 * @param editor 编辑者id
+	 * @param origin 来源
+	 * @param content 主要内容
+	 * @return 是否修改成功
+	 */
+	@RequestMapping(value="/update/{id}")
+	@ResponseBody
+	public String update(@PathVariable("id")Integer id,
+			@RequestParam("type") String type,
+			@RequestParam("title") String title,
+			@RequestParam("origin") String origin,
+			@RequestParam("content") String content) {
+		
+		//准备一个案列
+		if(title == null || title.equals("") || origin == null || origin.equals("") 
+				|| content == null || content.equals("")) {
+			return JsonResult.RS_FALSE;
+		}
+		Case case1 = new Case();
+		//赋值
+		case1.setId(id);
+		case1.setContent(content);
+		case1.setOrigin(origin);
+		case1.setTitle(title);
+		case1.setType(type);
+		if(caseService.updateOneCase(case1))
+			return JsonResult.RS_TRUE;
+		return JsonResult.RS_FALSE;
+	}
+	
+	/**
+	 * 查找到其中的一个案例并返回
+	 * @param id 案列的id号
+	 * @return D返回一个案列的json信息
+	 */
+	@RequestMapping(value="/get/{id}",method=RequestMethod.GET)
+	@ResponseBody
+	public String getOneCase(@PathVariable("id")Integer id) {
+		Case case1 = caseService.selectOneCaseById(id);
+		String jsonResult = JSON.toJSONString(case1);
+		return jsonResult;
+	}
 }
+
+
+
+
+

@@ -23,7 +23,7 @@ public class CaseDaoImpl implements CaseDao {
 	private JdbcTemplate jdbcTemplate;
 	
 	@Override
-	public int insert(Case mycase) {
+	public Integer insert(Case mycase) {
 		String sql = "insert into t_case(type,title,editor,origin,date,click,content)values(?,?,?,?,?,?,?)";
 		Integer rs = jdbcTemplate.update(sql,mycase.getType(), mycase.getTitle(),
 				mycase.getEditor(),mycase.getOrigin(),mycase.getDate(),
@@ -86,4 +86,19 @@ public class CaseDaoImpl implements CaseDao {
 		return rs;
 	}
 
+	@Override
+	public Integer deleteById(Integer id) {
+		String sql = "delete from t_case where id=?";
+		Integer rs = jdbcTemplate.update(sql,id);
+		return rs;
+	}
+
+	@Override
+	public Integer update(Case case1) {
+		String sql = "update t_case set title=?,type=?,origin=?,content=? where id=?";
+		Integer rs = jdbcTemplate.update(sql,case1.getTitle(),case1.getType(),case1.getOrigin(),case1.getContent(),case1.getId());
+		return rs;
+	}
+
+	
 }
