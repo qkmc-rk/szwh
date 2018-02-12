@@ -43,5 +43,9 @@ public class CaseServiceImpl implements CaseService {
 	public Case selectOneCaseById(Integer id) {
 		return caseDao.selectById(id);
 	}
+	@Override
+	public List<Case> selectSomeCase(int start, int end) {
+		return caseDao.selectSome(start, end);
+	}
 	
 }

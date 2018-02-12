@@ -39,5 +39,8 @@ public interface CaseService {
 	 * @return 一个案列(Case)的实例对象
 	 */
 	Case selectOneCaseById(Integer id);
+
+
+	List<Case> selectSomeCase(int start, int end);
 	
 }
