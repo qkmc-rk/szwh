@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.cnbtl.entity.Case;
+import com.cnbtl.service.CasePageService;
 import com.cnbtl.service.CaseService;
+import com.cnbtl.util.Page;
 
 /**
  * 控制前端页面的一些请求和转发
@@ -24,6 +26,9 @@ public class FrontendController {
 	@Autowired
 	CaseService caseService;
 	
+	@Autowired
+	CasePageService casePageService;
+	
 	/**
 	 * 返回主页
 	 * 主页需要有六个案列
@@ -36,13 +41,13 @@ public class FrontendController {
 		//1.获取6个案列
 		if(start == null || end == null) {
 			start = 0;
-			end = 7;
+			end = 6;
 		}
 		List<Case> cases;
 		try {
 			cases = caseService.getAllCase();
 			if(cases != null) {
-				cases = cases.subList(0, 6);
+				cases = cases.subList(start, end);
 				mdv.addObject("cases", cases);
 				mdv.setViewName("/frontend/index");
 			}else {
@@ -73,10 +78,26 @@ public class FrontendController {
 	 * @return 案列页面
 	 */
 	@RequestMapping("/article")
-	public String article() {
+	public ModelAndView article(@RequestParam(value="type",required=false)String type,
+			Integer currentPage) {
+		
+		ModelAndView mdv = new ModelAndView();
+		if(currentPage == null) currentPage = 1;
+		/**
+		 * 此处没有对type进行处理
+		 * 因为暂时没给如何处理的需求,等后期调整即可.
+		 */
 		//获取分页的Page
+		Page<Case> page = casePageService.getPage(currentPage);
+		if(page != null) {
+			mdv.addObject("page", page);
+			mdv.setViewName("/frontend/article");
+		}else {
+			mdv.addObject("message","没有获取到分页锁在的列表信息");
+			mdv.setViewName("/error");
+		}
 		//将page装入model,返回
-		return null;
+		return mdv;
 	}
 	
 	@RequestMapping("/article_show")
@@ -104,9 +125,6 @@ public class FrontendController {
 		}else {
 			case2 = null;
 		}
-		System.out.println(case0);
-		System.out.println(case1);
-		System.out.println(case2);
 		//设置视图
 		if(case1 != null) {
 			mdv.addObject("case0", case0);

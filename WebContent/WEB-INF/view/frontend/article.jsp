@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -15,6 +17,11 @@
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+		<script type="text/javascript">
+			function goToPage(option){
+				window.location.href = "article?currentPage=" + $(option).val();
+			}
+		</script>
 	</head>
 
 	<body id="backgrounds">
@@ -86,81 +93,61 @@
 
 						<div class="bd_n">
 							<ul class="sc2_n">
-
-								<li>
-									<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-1.jpg" alt="中国人寿双养签约仪式新闻发布会" /><span></span>
-										<h3>中国人寿双养签约仪式新闻发布会</h3>
-									</a>
-								</li>
-								
-								<li>
-									<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-2.jpg" alt="阳光集团表彰暨开门红启动会" /><span></span>
-										<h3>阳光集团表彰暨开门红启动会</h3>
-									</a>
-								</li>
-			
-								<li>
-									<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-3.jpg" alt="中国人寿高端客户大讲堂" /><span></span>
-										<h3>中国人寿高端客户大讲堂</h3>
-									</a>
-								</li>
-			
-								<li>
-									<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-4.jpg" alt="中国人寿高峰会颁奖典礼" /><span></span>
-										<h3>中国人寿高峰会颁奖典礼</h3>
-									</a>
-								</li>
-			
-								<li>
-									<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-5.jpg" alt="富德生命人寿荣誉表彰暨开门红启动会" /><span></span>
-										<h3>富德生命人寿荣誉表彰暨开门红启动会</h3>
-									</a>
-								</li>
-			
-								<li>
-									<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-6.jpg" alt="中国人寿新险种宣传物料" /><span></span>
-										<h3>中国人寿新险种宣传物料</h3>
-									</a>
-								</li>
-
-								<li>
-									<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-7.jpg" alt="糖酒会美国展团" /><span></span>
-										<h3>糖酒会美国展团</h3>
-									</a>
-								</li>
-
-								<li>
-									<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-8.jpg" alt="长安福特成都试驾会" /><span></span>
-										<h3>长安福特成都试驾会</h3>
-									</a>
-								</li>
-
-								<li>
-									<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-9.jpg" alt="悦香园实业端午新品发布会" /><span></span>
-										<h3>悦香园实业端午新品发布会</h3>
-									</a>
-								</li>
+								<c:forEach var="case1" items="${page.list }" varStatus="status" >
+									<li>
+										<a href="<%=request.getContextPath() %>/article_show?id=${case1.id}"><img id="case${status.index }" src="" alt="中国人寿双养签约仪式新闻发布会" /><span></span>
+											<h3>${case1.title}</h3>
+										</a>
+									</li>
+									<div style="display: none" id="case_${status.index }">
+										${case1.content}
+									</div>
+								</c:forEach>
 							</ul>
 						</div>
 
 						<div id="pagger" style="text-align: center">
 							<div style="width:100%;float:left;">
-								<span>共21页，当前为第1页，每页9条，合计181条</span>
-								<a disabled="disabled" style="margin-right:5px;">首页</a>
-								<a disabled="disabled" style="margin-right:5px;">上一页</a><span style="margin-right:5px;font-weight:Bold;color:red;">1</span>
-								<a href="" style="margin-right:5px;">2</a>
-								<a href="" style="margin-right:5px;">3</a>
-								<a href="" style="margin-right:5px;">4</a>
-								<a href="" style="margin-right:5px;">5</a>
-								<a href="" style="margin-right:5px;">...</a>
-								<a href="" style="margin-right:5px;">下一页</a>
-								<a href="" style="margin-right:5px;">尾页</a>&nbsp;&nbsp;转到
-								<select name="pagger_input" id="pagger_input" onchange="ANP_goToPage(this)">
-									<option value="1" selected="true">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
+								<span>共${page.totalPage }页，当前为第${page.currentPage }页，每页${page.pageRowNum }条，合计${page.totalRowNum }条</span>
+								<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=1">首页</a>
+								
+								<c:if test="${page.currentPage == 1  }">
+									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=1">上一页</a>
+								</c:if>
+								<c:if test="${page.currentPage > 1  }">
+									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=${page.currentPage - 1}">上一页</a>
+								</c:if>
+								
+								<c:forEach varStatus="status" begin="1" end="${page.totalPage }">
+									<c:if test="${page.currentPage == status.index}">
+										<span style="margin-right:5px;font-weight:Bold;color:red;">${page.currentPage}</span>
+									</c:if>
+									<c:if test="${page.currentPage != status.index && status.index <= 5}">
+										<a href="<%=request.getContextPath() %>/article?currentPage=${status.index}" style="margin-right:5px;">${status.index}</a>
+									</c:if>
+									<c:if test="${status.index == 6}">
+										<span style="margin-right:5px;font-weight:Bold;color:black;">...</span>
+									</c:if>
+								</c:forEach>
+								
+								<c:if test="${page.currentPage == page.totalPage  }">
+									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=${page.totalPage}">下一页</a>
+								</c:if>
+								<c:if test="${page.currentPage < page.totalPage  }">
+									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=${page.currentPage + 1}">下一页</a>
+								</c:if>
+								
+								<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=${page.totalPage}">尾页</a>&nbsp;&nbsp;转到
+								
+								<select name="pagger_input" id="pagger_input" onchange="goToPage(this)">
+									<c:forEach varStatus="status" begin="1" end="${page.totalPage}">
+										<c:if test="${page.currentPage == status.index }">
+											<option value="${status.index}" selected="true">${status.index}</option>
+										</c:if>
+										<c:if test="${page.currentPage != status.index }">
+											<option value="${status.index}">${status.index}</option>
+										</c:if>
+									</c:forEach>
 								</select> 页
 							</div>
 						</div>
@@ -190,7 +177,7 @@
 				<div class="col-lg-6 col-md-6 col-xs-6" style="padding: 0;">
 					<div class="genius_index8_2">
 						<div class="genius_index8_2_img" style="position: absolute; z-index: -1; height: 100%; width: 100%;">
-							<img src="<%=request.getContextPath() %>/static/front/images/fwsj.jpg"/ style="height: 100%; width: 100%;">
+							<img src="<%=request.getContextPath() %>/static/front/images/fwsj.jpg" style="height: 100%; width: 100%;" />
 						</div>
 						<div class="genius_index8_2_letters">
 							<p>为您服务：028-85120685</p>
@@ -237,6 +224,57 @@
 				</div>
 			</ul>
 		</div>
+		
+		<!--偷懒写的js  -->
+		<script language="javascript" type="text/javascript">
+			$(document).ready(function(){
+				$("#case_0 img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case0").attr('src',$(this).attr("src"));
+		 		});
+				$("#case_1 img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case1").attr('src',$(this).attr("src"));
+		 		});
+				$("#case_2 img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case2").attr('src',$(this).attr("src"));
+		 		});
+				$("#case_3 img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case3").attr('src',$(this).attr("src"));
+		 		});
+				$("#case_4 img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case4").attr('src',$(this).attr("src"));
+		 		});
+				$("#case_5 img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case5").attr('src',$(this).attr("src"));
+		 		});
+				$("#case_6 img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case6").attr('src',$(this).attr("src"));
+		 		});
+				$("#case_7 img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case7").attr('src',$(this).attr("src"));
+		 		});
+				$("#case_8 img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case8").attr('src',$(this).attr("src"));
+		 		});
+			});
+		</script>
 	</body>
 
 </html>
