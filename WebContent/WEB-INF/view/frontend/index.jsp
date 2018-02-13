@@ -152,43 +152,60 @@
 		<div class="cls"></div>
 
 		<div class="genius_i">
-
+			<div style="display: none;" id="cases0content">
+				${cases[0].content}
+			</div>
+			<div style="display: none;" id="cases1content">
+				${cases[1].content}
+			</div>
+			<div style="display: none;" id="cases2content">
+				${cases[2].content}
+			</div>
+			<div style="display: none;" id="cases3content">
+				${cases[3].content}
+			</div>
+			<div style="display: none;" id="cases4content">
+				${cases[4].content}
+			</div>
+			<div style="display: none;" id="cases5content">
+				${cases[5].content}
+			</div>
 			<div class="bd">
 				<ul class="sc2">
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-1.jpg" alt="中国人寿双养签约仪式新闻发布会" /><span></span>
-							<h3>中国人寿双养签约仪式新闻发布会</h3>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[0].id}"><img id="case0" src="" alt="${cases[0].title}" /><span></span>
+							<h3>${cases[0].title}</h3>
 						</a>
 					</li>
 					
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-2.jpg" alt="阳光集团表彰暨开门红启动会" /><span></span>
-							<h3>阳光集团表彰暨开门红启动会</h3>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[1].id}"><img id="case1" src="" alt="${cases[1].title}" /><span></span>
+							<h3>${cases[1].title}</h3>
 						</a>
 					</li>
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-3.jpg" alt="中国人寿高端客户大讲堂" /><span></span>
-							<h3>中国人寿高端客户大讲堂</h3>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[2].id}"><img id="case2" src="" alt="${cases[2].title}" /><span></span>
+							<h3>${cases[2].title}</h3>
 						</a>
 					</li>
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-4.jpg" alt="中国人寿高峰会颁奖典礼" /><span></span>
-							<h3>中国人寿高峰会颁奖典礼</h3>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[3].id}"><img id="case3" src="" alt="${cases[3].title}" /><span></span>
+							<h3>${cases[3].title}</h3>
 						</a>
 					</li>
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-5.jpg" alt="富德生命人寿荣誉表彰暨开门红启动会" /><span></span>
-							<h3>富德生命人寿荣誉表彰暨开门红启动会</h3>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[4].id}"><img id="case4" src="" alt="${cases[4].title}" /><span></span>
+							<h3>${cases[4].title}</h3>
 						</a>
 					</li>
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/uploadfile/3-6.jpg" alt="中国人寿新险种宣传物料" /><span></span>
-							<h3>中国人寿新险种宣传物料</h3>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[5].id}"><img id="case5" src="" alt="${cases[5].title}" /><span></span>
+							<h3>${cases[5].title}</h3>
 						</a>
 					</li>
 				</ul>
@@ -231,7 +248,7 @@
 
 				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgsh.png" alt="zgsh" /></li>
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/fdsm.png" alt="九阳股份有限公司" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/fdsm.png" alt="zgsh" /></li>
 
 			</div>
 		</div>
@@ -360,6 +377,41 @@
 				</div>
 			</ul>
 		</div>
+		<!--此处的js代码用于替换案例中的图片的src内容  -->
+		<script language="javascript" type="text/javascript">
+			$(document).ready(function(){
+				$("#cases0content img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case0").attr('src',$(this).attr("src"));
+		 		});
+				$("#cases1content img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case1").attr('src',$(this).attr("src"));
+		 		});
+				$("#cases2content img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case2").attr('src',$(this).attr("src"));
+		 		});
+				$("#cases3content img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case3").attr('src',$(this).attr("src"));
+		 		});
+				$("#cases4content img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case4").attr('src',$(this).attr("src"));
+		 		});
+				$("#cases5content img").each(function(i){
+		   			//alert("no:"+"  src:"+$(this).attr("src"));
+		   			//替换某个img的src
+		   			$("#case5").attr('src',$(this).attr("src"));
+		 		});
+			});
+		</script>
 	</body>
 
 </html>

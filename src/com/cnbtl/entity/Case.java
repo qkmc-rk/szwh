@@ -72,6 +72,6 @@ public class Case {
 	@Override
 	public String toString() {
 		return "Case [id=" + id + ", type=" + type + ", title=" + title + ", editor=" + editor + ", origin=" + origin
-				+ ", date=" + date + ", click=" + click + ", content=" + content + "]";
+				+ ", date=" + date + ", click=" + click + "]";
 	}
 }

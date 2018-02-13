@@ -16,9 +16,7 @@ public class CaseServiceImpl implements CaseService {
 	CaseDao caseDao;
 	@Override
 	public List<Case> getAllCase() {
-		int end = caseDao.selectForCount();
-		int start = 0;
-		List<Case> cases = caseDao.selectSome(start, end);
+		List<Case> cases = caseDao.selectAll();
 		return cases;
 	}
 	@Override

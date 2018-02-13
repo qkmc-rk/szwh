@@ -53,7 +53,7 @@ public class CaseDaoImpl implements CaseDao {
 			public List<Case> mapRow(ResultSet rs, int rowNum) throws SQLException {
 				List<Case> list = new ArrayList<>();
 				Case mycase = null;
-				while(rs.next()) {
+				do{
 					mycase = new Case();
 					mycase.setId(rs.getInt(1));
 					mycase.setType(rs.getString(2));
@@ -64,7 +64,7 @@ public class CaseDaoImpl implements CaseDao {
 					mycase.setClick(rs.getInt(7));
 					mycase.setContent(rs.getString(8));
 					list.add(mycase);
-				}
+				}while(rs.next());
 				return list;
 			}
 		};
@@ -98,6 +98,34 @@ public class CaseDaoImpl implements CaseDao {
 		String sql = "update t_case set title=?,type=?,origin=?,content=? where id=?";
 		Integer rs = jdbcTemplate.update(sql,case1.getTitle(),case1.getType(),case1.getOrigin(),case1.getContent(),case1.getId());
 		return rs;
+	}
+
+	@Override
+	public List<Case> selectAll() {
+		String sql = "select * from t_case";
+		RowMapper<List<Case>> rowMapper = new RowMapper<List<Case>>() {
+
+			@Override
+			public List<Case> mapRow(ResultSet rs, int rowNum) throws SQLException {
+				List<Case> list = new ArrayList<>();
+				Case mycase = null;
+				do{
+					mycase = new Case();
+					mycase.setId(rs.getInt(1));
+					mycase.setType(rs.getString(2));
+					mycase.setTitle(rs.getString(3));
+					mycase.setEditor(rs.getInt(4));
+					mycase.setOrigin(rs.getString(5));
+					mycase.setDate(rs.getTimestamp(6));
+					mycase.setClick(rs.getInt(7));
+					mycase.setContent(rs.getString(8));
+					list.add(mycase);
+				}while(rs.next());
+				return list;
+			}
+		};
+		List<Case> cases = jdbcTemplate.queryForObject(sql, rowMapper);
+		return cases;
 	}
 
 	

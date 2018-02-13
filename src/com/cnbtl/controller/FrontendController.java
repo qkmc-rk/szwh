@@ -40,8 +40,9 @@ public class FrontendController {
 		}
 		List<Case> cases;
 		try {
-			cases = caseService.selectSomeCase(start,end);
+			cases = caseService.getAllCase();
 			if(cases != null) {
+				cases = cases.subList(0, 6);
 				mdv.addObject("cases", cases);
 				mdv.setViewName("/frontend/index");
 			}else {
@@ -82,15 +83,41 @@ public class FrontendController {
 	public ModelAndView article_show(@RequestParam("id") Integer id) {
 		ModelAndView mdv = new ModelAndView();
 		//1.通过id查询到案列
-		Case case1 = caseService.selectOneCaseById(id);
-		//2.设置model并返回视图
+		List<Case> cases = caseService.getAllCase();
+		Case case0,case1 = null,case2;
+		//从list中获取指定id的记录.
+		for (Case cs : cases) {
+			if(cs.getId() == id) {
+				case1 = cs;
+				break;
+			}
+		}
+		//从list中获取指定id的object的前一个.需要判断是否是第一个
+		if(cases.indexOf(case1)-1 >= 0 && null != cases.get(cases.indexOf(case1) - 1) ) {
+			case0 = cases.get(cases.indexOf(case1)-1);
+		}else {
+			case0 = null;
+		}
+		//从list中获取指定id的object的后一个,需要判断是否是最后一个
+		if(cases.indexOf(case1)+1 < cases.size() && null != cases.get(cases.indexOf(case1) + 1) ) {
+			case2 = cases.get(cases.indexOf(case1)+1);
+		}else {
+			case2 = null;
+		}
+		System.out.println(case0);
+		System.out.println(case1);
+		System.out.println(case2);
+		//设置视图
 		if(case1 != null) {
+			mdv.addObject("case0", case0);
 			mdv.addObject("case1", case1);
+			mdv.addObject("case2", case2);
 			mdv.setViewName("/frontend/article_show");
 		}else {
 			mdv.addObject("message", "获取指定Id=" + id +"的案列时出现错误!");
 			mdv.setViewName("/error");
 		}
+		//2.返回视图
 		return mdv;
 	}
 	

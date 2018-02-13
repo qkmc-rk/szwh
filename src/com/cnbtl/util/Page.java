@@ -23,11 +23,15 @@ import java.util.List;
  */
 public class Page<T> {
 
+	//总记录条数
 	private Integer totalRowNum;
+	//每页记录数
 	private Integer pageRowNum;
+	//总共的页数
 	private Integer totalPageNum;
 	
 	private List<T> list;
+	//当前页数
 	private Integer currentPageNum;
 	
 	

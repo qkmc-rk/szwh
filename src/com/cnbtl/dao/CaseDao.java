@@ -34,6 +34,9 @@ public interface CaseDao {
 	 */
 	Integer selectForCount();
 	
+	
+	List<Case> selectAll();
+	
 	/**
 	 * 更新表中某一列的值+一个整数
 	 * @param colName 列名

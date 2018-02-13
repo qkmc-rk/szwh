@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -14,9 +15,7 @@
 		<script src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
 	</head>
-
 	<body id="backgrounds">
 
 		<!--/*头部加入收藏*/-->
@@ -119,13 +118,13 @@
 
 						<div class="biaoti_div">
 
-							<h3 class="articles">中国人寿</h3>
+							<h3 class="articles">${case1.title}</h3>
 
 							<div id="about_proInfo_0">
 								<p class="laiyuan">
-									<span>来源：手足文化</span>
-									<span>发布时间：2018-02-11</span>
-									<span>点击次数：<font id="CCdiv">6952</font><script language="JavaScript" type="text/javascript">
+									<span>${case1.origin}</span>
+									<span>${case1.date}</span>
+									<span>点击次数：<font id="CCdiv">${case1.click}</font><script language="JavaScript" type="text/javascript">
    ClickCount("CCdiv/news/226/11");
   </script></span>
 									<span>【字体：<a href="javascript://" onClick="Zoom.style.fontSize='18px';">大</a>&nbsp;&nbsp;<a href="javascript://" onClick="Zoom.style.fontSize='16px';">中</a>&nbsp;&nbsp;<a href="javascript://" onClick="Zoom.style.fontSize='14px';">小</a>】</span>
@@ -136,10 +135,7 @@
 						<div class="content_txt">
 
 							<font id="Zoom" style="line-height:1.5em;">
-								<p style="text-align: center;">中国人寿的一些活动记录</p><h1 style="text-align: center;"><i>主要做了如下内容</i></h1><p style="text-align: center;">活动进行的非常顺利</p>
-								<p style="text-align: center;"><img src="<%=request.getContextPath() %>/static/front/uploadfile/314445437.png" style="float:none;" title="" /></p>
-								<p style="text-align: center;"><br/></p>
-								<p style="text-align: center;"><img src="<%=request.getContextPath() %>/static/front/uploadfile/casese.jpg" style="float:none;" title="" /><img src="<%=request.getContextPath() %>/static/front/upload1/2015-06-29/blob6669500.png" /></p>
+								${case1.content}
 							</font>
 
 						</div>
@@ -147,11 +143,23 @@
 						<div class="cls"></div>
 						<div class="row text-center" style="max-width: 1933px; margin: auto;">
 							<div class=" col-lg-offset-4 col-lg-2">
-								<font style="float:left;line-height:33px;">上一页:没有了</font>
+								<font style="float:left;line-height:33px;">
+									<c:if test="${empty case0}">
+										<p>上一页:没有了</p>
+									</c:if>
+									<c:if test="${not empty case0}">
+										<a href='<%=request.getContextPath() %>/article_show?id=${case0.id}'>上一页:${case0.title}</a>
+									</c:if>
+								</font>
 							</div>
 							<div class="col-lg-2">
 								<font style="float:right;line-height:33px;">
-									<a href='<%=request.getContextPath() %>/article_show'>下一页:中国人寿</a>
+									<c:if test="${empty case2}">
+										<p>下一页:没有了</p>
+									</c:if>
+									<c:if test="${not empty case2}">
+										<a href='<%=request.getContextPath() %>/article_show?id=${case2.id}'>下一页:${case2.title}</a>
+									</c:if>
 								</font>
 							</div>
 						</div>
