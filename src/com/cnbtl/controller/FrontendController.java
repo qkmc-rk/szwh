@@ -101,10 +101,13 @@ public class FrontendController {
 	}
 	
 	@RequestMapping("/article_show")
-	public ModelAndView article_show(@RequestParam("id") Integer id) {
+	public ModelAndView article_show(@RequestParam(value="id",required=false) Integer id) {
 		ModelAndView mdv = new ModelAndView();
 		//1.通过id查询到案列
 		List<Case> cases = caseService.getAllCase();
+		if(id == null) {
+			id = cases.get(0).getId();
+		}
 		Case case0,case1 = null,case2;
 		//从list中获取指定id的记录.
 		for (Case cs : cases) {

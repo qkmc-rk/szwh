@@ -5,9 +5,31 @@ public class TitleAndDate {
 	private Integer id;
 	private String title;
 	private String date;
+	private Integer click;
+	private String type;
+	private String origin;
+	
 	
 	public Integer getId() {
 		return id;
+	}
+	public Integer getClick() {
+		return click;
+	}
+	public void setClick(Integer click) {
+		this.click = click;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getOrigin() {
+		return origin;
+	}
+	public void setOrigin(String origin) {
+		this.origin = origin;
 	}
 	public void setId(Integer id) {
 		this.id = id;

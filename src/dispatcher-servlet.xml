@@ -47,7 +47,7 @@
 	<!-- <mvc:view-controller path="/service" view-name="/frontend/service"/> -->
 	<mvc:view-controller path="/article" view-name="/frontend/article"/>
 	<!-- <mvc:view-controller path="/contact" view-name="/frontend/contact"/> -->
-	<mvc:view-controller path="/article_show" view-name="/frontend/article_show"/>
+<!-- 	<mvc:view-controller path="/article_show" view-name="/frontend/article_show"/> -->
 	<!--配置拦截器用于处理管理员登录  -->
 	<mvc:interceptors>
 		<mvc:interceptor>

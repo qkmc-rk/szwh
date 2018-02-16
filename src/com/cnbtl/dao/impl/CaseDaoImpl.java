@@ -35,9 +35,6 @@ public class CaseDaoImpl implements CaseDao {
 	@Transactional
 	public Case selectById(Integer id) {
 		//每次单独查询都要增加一次click数量.
-		Integer rs = updateClickPlusOne(id,1);
-		if(rs <1)
-			throw new CaseException("增加点击次数失败,查询失败");
 		String sql = "select * from t_case where id=?";
 		RowMapper<Case> rowMapper = new BeanPropertyRowMapper<>(Case.class);
 		Case mycase = jdbcTemplate.queryForObject(sql, rowMapper, id);

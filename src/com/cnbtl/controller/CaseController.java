@@ -58,6 +58,9 @@ public class CaseController {
 				titleAndDate.setTitle(case1.getTitle());
 				titleAndDate.setDate(sdf.format(new Date(case1.getDate().getTime())));
 				titleAndDate.setId(case1.getId());
+				titleAndDate.setClick(case1.getClick());
+				titleAndDate.setOrigin(case1.getOrigin());
+				titleAndDate.setType(case1.getType());
 				rs.add(titleAndDate);
 			}
 		}
@@ -111,6 +114,9 @@ public class CaseController {
 	@RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
 	@ResponseBody
 	public String deleteCase(@PathVariable("id")Integer id) {
+		if(id == null) {
+			return JsonResult.RS_FALSE;
+		}
 		boolean rs = caseService.deleteOneCaseById(id);
 		if(rs)
 			return JsonResult.RS_TRUE;
@@ -132,20 +138,24 @@ public class CaseController {
 			@RequestParam("type") String type,
 			@RequestParam("title") String title,
 			@RequestParam("origin") String origin,
-			@RequestParam("content") String content) {
+			@RequestParam("content") String content,
+			@RequestParam("click")Integer click) {
 		
 		//准备一个案列
-		if(title == null || title.equals("") || origin == null || origin.equals("") 
-				|| content == null || content.equals("")) {
+		if(title == null || title.equals("") 
+				|| content == null || content.equals("")
+				|| click == null || id == null) {
 			return JsonResult.RS_FALSE;
 		}
 		Case case1 = new Case();
 		//赋值
+		
 		case1.setId(id);
 		case1.setContent(content);
-		case1.setOrigin(origin);
 		case1.setTitle(title);
 		case1.setType(type);
+		case1.setClick(click);
+		case1.setOrigin(origin);
 		if(caseService.updateOneCase(case1))
 			return JsonResult.RS_TRUE;
 		return JsonResult.RS_FALSE;

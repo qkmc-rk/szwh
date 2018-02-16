@@ -39,7 +39,7 @@
 								<a href="<%=request.getContextPath() %>/service"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />服务<i style="font-weight: 700;">SERVICE</i></a>
 							</li>
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/article" class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />案例<i style="font-weight: 700;">CASE</i></a>
+								<a href="<%=request.getContextPath() %>/article"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />案例<i style="font-weight: 700;">CASE</i></a>
 							</li>
 							<li class="off">
 								<a href="<%=request.getContextPath() %>/contact"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />联系<i style="font-weight: 700;">CONTACT</i></a>
@@ -132,7 +132,7 @@
 							</div>
 						</div>
 
-						<div class="content_txt">
+						<div class="content_txt" style="width:600px; max-width:100%; margin:auto;">
 
 							<font id="Zoom" style="line-height:1.5em;">
 								${case1.content}
@@ -141,9 +141,9 @@
 						</div>
 
 						<div class="cls"></div>
-						<div class="row text-center" style="max-width: 1933px; margin: auto;">
-							<div class=" col-lg-offset-4 col-lg-2">
-								<font style="float:left;line-height:33px;">
+						<div class="row text-center" style="max-width: 1933px; margin: auto; border-top:dashed 1px #000000;">
+							<div class=" col-lg-offset-4 col-lg-2 col-xs-offset-4 col-xs-2 col-md-offset-4 col-md-2 text-center">
+								<font style="line-height:33px;">
 									<c:if test="${empty case0}">
 										<p>上一页:没有了</p>
 									</c:if>
@@ -152,8 +152,8 @@
 									</c:if>
 								</font>
 							</div>
-							<div class="col-lg-2">
-								<font style="float:right;line-height:33px;">
+							<div class="col-lg-2 col-xs-2 col-md-2 text-center">
+								<font style="line-height:33px;">
 									<c:if test="${empty case2}">
 										<p>下一页:没有了</p>
 									</c:if>
