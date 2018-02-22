@@ -34,7 +34,6 @@ public class CaseDaoImpl implements CaseDao {
 	@Override
 	@Transactional
 	public Case selectById(Integer id) {
-		//每次单独查询都要增加一次click数量.
 		String sql = "select * from t_case where id=?";
 		RowMapper<Case> rowMapper = new BeanPropertyRowMapper<>(Case.class);
 		Case mycase = jdbcTemplate.queryForObject(sql, rowMapper, id);

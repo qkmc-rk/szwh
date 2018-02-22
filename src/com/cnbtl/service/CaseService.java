@@ -43,4 +43,6 @@ public interface CaseService {
 
 	List<Case> selectSomeCase(int start, int end);
 	
+	Integer plusClick(Integer id, Integer plusNum);
+	
 }
