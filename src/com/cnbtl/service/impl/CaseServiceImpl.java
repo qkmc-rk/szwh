@@ -45,5 +45,8 @@ public class CaseServiceImpl implements CaseService {
 	public List<Case> selectSomeCase(int start, int end) {
 		return caseDao.selectSome(start, end);
 	}
-	
+	@Override
+	public Integer plusClick(Integer id, Integer plusNum) {
+		return caseDao.updateClickPlusOne(id, plusNum);
+	}
 }

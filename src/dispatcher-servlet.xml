@@ -56,5 +56,9 @@
 			<mvc:exclude-mapping path="/admin/logoff"/>
 			<bean class="com.cnbtl.interceptor.AdminPrivInterceptor"></bean>
 		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/article_show"/>
+			<bean class="com.cnbtl.interceptor.ClickInteceptor"></bean>
+		</mvc:interceptor>
 	</mvc:interceptors>
 </beans>

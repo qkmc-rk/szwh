@@ -134,6 +134,8 @@ public class FrontendController {
 			mdv.addObject("case1", case1);
 			mdv.addObject("case2", case2);
 			mdv.setViewName("/frontend/article_show");
+			//访问次数的增加由拦截器实现.
+			//...
 		}else {
 			mdv.addObject("message", "获取指定Id=" + id +"的案列时出现错误!");
 			mdv.setViewName("/error");
