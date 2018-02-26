@@ -25,7 +25,7 @@
 					<a class="navbar-brand" href="#"><span>手足文化</span>后台管理</a>
 					<ul class="user-menu">
 						<li class="dropdown pull-right">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>><span>欢迎您,${user.name}</span>></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span>欢迎您,${user.name}</span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="<%= request.getContextPath() %>/admin/logoff"><span class="glyphicon glyphicon-log-out"></span> 退出登录</a></li>
 							</ul>
