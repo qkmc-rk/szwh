@@ -190,7 +190,7 @@
 		</div>
 		<!-- 使用div设置背景图片 -->
 		<div id="bg" style="position:absolute; width:100%; height:100%; left:0px; top:0px;z-index:-20">
-			<img style="position: fixed;" src="<%=request.getContextPath() %>/static/front/images/bjtp-loss.jpg" width:100%; height:100%;></img>
+			<img style="position: fixed; width:100%; height:100%;" src="<%=request.getContextPath() %>/static/front/images/bjtp-loss.jpg"></img>
 		</div>
 	</body>
 
