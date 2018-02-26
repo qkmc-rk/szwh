@@ -19,7 +19,7 @@
 
 	</head>
 
-	<body id="backgrounds">
+	<body>
 		<!--/*头部加入收藏*/-->
 		<div class="Index_top_1">
 			<div class="Index_top_1_1">

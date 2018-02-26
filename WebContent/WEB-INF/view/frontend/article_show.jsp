@@ -16,7 +16,7 @@
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
-	<body id="backgrounds">
+	<body>
 
 		<!--/*头部加入收藏*/-->
 		<div class="Index_top_1">
