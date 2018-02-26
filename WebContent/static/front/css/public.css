@@ -1,6 +1,6 @@
 body{
 	background:url(../images/bjtp-loss.jpg) top center no-repeat;
-	background-size: 1920px 100%;
+	background-size: 100% 100%;
 	background-attachment: fixed;
 }
  *{margin:0;padding:0}
@@ -234,7 +234,6 @@ body{
 
 
 .genius_i{width:1267px;margin:0 auto;padding-top:10px;}
-/* æˆåŠŸæ¡ˆä¾‹ ä¸Šå³ä¸‹å·¦ */
 .bd{overflow:hidden}
 .sc2{padding:0 0 20px;overflow:hidden;width:100%;}
 .sc2 li{float:left;width:392px;margin:15px 15px 15px 15px;display:inline}
@@ -248,10 +247,8 @@ body{
 }
 .sc2 a span{width:310px;height:234px;background:url(../images/index_off.png) no-repeat;cursor:pointer;float:left;margin:-230px 0 0;position:relative}
 .sc2 a:hover span{background:url(../images/index_on.png) no-repeat -310px 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src = '../images/i20_2.png', sizingMethod = 'scale')}
-/* æˆåŠŸæ¡ˆä¾‹ */
 
 
-/* å†…é¡µæˆåŠŸæ¡ˆä¾‹ */
 .bd_n{overflow:hidden}
 .sc2_n{padding:0 0 20px;overflow:hidden;width:973px; margin: auto;}
 .sc2_n li{float:left;width:310px;margin:5px 10px 10px 4px;display:inline}
@@ -265,14 +262,11 @@ body{
 }
 .sc2_n a span{width:310px;height:234px;background:url(../images/index_off.png) no-repeat;cursor:pointer;float:left;margin:-230px 0 0;position:relative}
 .sc2_n a:hover span{background:url(../images/index_on.png) no-repeat -310px 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src = '../images/i20_2.png', sizingMethod = 'scale')}
-/* å†…é¡µæˆåŠŸæ¡ˆä¾‹ */
 
 
 
 
-/* æ­£æ–‡*/
 
-/* å†…é¡µ*/
 .y_index_ny{width:100%;margin:0 auto;}
 .y_index_ny_left{width:1002px;margin:0 auto;float:left; height:32px;}
 .y_index_ny_left h3{font-size:16px;color:#AE1D2C;font-weight:bold;float:left;}
@@ -281,13 +275,10 @@ body{
 .y_index_ny_left span a:hover{color:#AE1D2C;font-size:14px;}
 .y_index_ny_left font{font-size:14px;color:#444243;}
 .y_index_nyi{width:100%;margin:0 auto;padding:1px; margin-bottom:10px;}
-/* å†…é¡µ*/
 
 
 
-/* å·¦è¾¹ */
 .y_left{margin:0 auto; padding-bottom:10px;}
-/* å·¦è¾¹ */
 
 .y_lefts_1{font-size:16px; line-height:1.5em;color:#252120;}
 /* left menu */
@@ -299,10 +290,8 @@ body{
 .y_lefts_1 .on a{color:#ffffff;}
 
 /* left menu */
-/* å·¦è¾¹1 */
 
 
-/* æ­£æ–‡*/
 
 /* article list */
 .article-list{width:100%;line-height:1.5em; font-size:14px;color:#444243; }
@@ -385,7 +374,6 @@ body{
 
 
 
-/* é€šç”¨ */
 
 .y_index_y4{width:100%;margin:0 auto;float:right;}
 
@@ -409,7 +397,6 @@ body{
 	width: 1070px;
 	margin: 0 auto;
 }
-/* é€šç”¨ */
 
 
 
@@ -457,7 +444,7 @@ body{
 /* report */
 .red{ color:red;}
 #nav .current,i,.btn-green,.btn-orange,.btn-gray,.btn-green2,.btn-orange2,.law .bd li{}
-.btn-green,.btn-orange,.btn-gray,.btn-green2,.btn-orange2{ border:0; display:inline-block; width:150px; height:35px; line-height:33px; font-size:24px; font-family:"å¾®è½¯é›…é»‘","é»‘ä½“","å¹¼åœ†"; text-align:center; color:#fff;background-position:0 -40px; text-indent:0; cursor:pointer;}
+.btn-green,.btn-orange,.btn-gray,.btn-green2,.btn-orange2{ border:0; display:inline-block; width:150px; height:35px; line-height:33px; font-size:24px; font-family:"微软雅黑"; text-align:center; color:#fff;background-position:0 -40px; text-indent:0; cursor:pointer;}
 .btn-gray{ background-position:0 -75px; color:#777; cursor:default;}
 .btn-gray .time{ font-size:18px; font-weight:normal;}
 .btn-green2,.btn-orange2{ width:80px; height:25px; font-size:16px; background-position:-80px -145px;}
@@ -504,7 +491,7 @@ body{
 }
 .sentence_about_p{
 	font-size: 24px;
-	font-family: "楷体";
+	font-family: "微软雅黑";
 	text-indent: 2em;
 }
 
@@ -518,7 +505,7 @@ body{
 .sentence_cult p{
 	float: left;
 	font-size: 24px;
-	font-family: "楷体";
+	font-family: "微软雅黑";
 	height: 100%;
 	width: 46px;
 }
