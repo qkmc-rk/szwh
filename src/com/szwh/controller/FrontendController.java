@@ -1,5 +1,6 @@
 package com.szwh.controller;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,10 +91,58 @@ public class FrontendController {
 		//获取分页的Page
 		Page<Case> page = casePageService.getPage(currentPage);
 		if(page != null) {
+			
+			/*//1.根据type进行过滤一下
+			List<Case> list = page.getList();
+			Iterator<Case> i = list.iterator();
+			if(type != null) {
+				switch(type) {
+				
+				case "brand":{
+					while(i.hasNext()) {
+						Case c = (Case) i.next();
+						if(!c.getType().equals("brand")) {
+							i.remove();
+						}
+					}
+				}
+				break;
+				case "activity":{
+					while(i.hasNext()) {
+						Case c = (Case) i.next();
+						if(!c.getType().equals("activity")) {
+							i.remove();
+						}
+					}
+				}
+				break;
+				case "design":{
+					while(i.hasNext()) {
+						Case c = (Case) i.next();
+						if(!c.getType().equals("design")) {
+							i.remove();
+						}
+					}
+				}
+				break;
+				case "movie":{
+					while(i.hasNext()) {
+						Case c = (Case) i.next();
+						if(!c.getType().equals("movie")) {
+							i.remove();
+						}
+					}
+				}
+				break;
+				}
+			}
+			//1.5删除完多余的设置一下在返回
+			page.setList(list);*/
+			//2.返回
 			mdv.addObject("page", page);
 			mdv.setViewName("/frontend/article");
 		}else {
-			mdv.addObject("message","没有获取到分页锁在的列表信息");
+			mdv.addObject("message","没有获取到分页所在的列表信息");
 			mdv.setViewName("/error");
 		}
 		//将page装入model,返回

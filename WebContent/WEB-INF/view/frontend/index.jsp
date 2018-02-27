@@ -117,7 +117,7 @@
 				<div class="genius_index_1">
 					<ul>
 						<li id="li-fourth">
-							<a href="<%=request.getContextPath() %>/article?type=video">
+							<a href="<%=request.getContextPath() %>/article?type=movie">
 							</a>
 						</li>
 					</ul>
