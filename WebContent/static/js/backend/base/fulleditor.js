@@ -5,13 +5,13 @@ var editor = new E('#editor');
 var rootPath = $('#contextPath').val();
 editor.customConfig.uploadImgServer = rootPath + "/upload/uploadimg";
 editor.customConfig.uploadFileName = "img";
-// alert((window.location.href).split("/cnbtl")[0] + rootPath +
+// alert((window.location.href).split("/szwh")[0] + rootPath +
 // "/upload/uploadimg");
 editor.customConfig.debug = true;
 // 事件函数,修改相对路径
 editor.customConfig.uploadImgHooks = {
 	customInsert : function(insertImg, result, editor) {
-		var url = (window.location.href).split("/cnbtl")[0] + rootPath
+		var url = (window.location.href).split("/szwh")[0] + rootPath
 				+ result.data[0];
 		// alert(url);
 		insertImg(url);
