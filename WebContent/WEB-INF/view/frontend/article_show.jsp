@@ -23,7 +23,7 @@
 			<div class="Index_top_1_1">
 
 				<div class="Index_top_1_1_1">
-					<a href="<%=request.getContextPath() %>/static/front/index"><img src="<%=request.getContextPath() %>/static/front/images/logo.jpg" style="width: 224px; height:173px; -webkit-box-shadow: 2px 7px 8px #444243; border-radius: 5%;" /></a>
+					<a href="<%=request.getContextPath() %>/index"><img src="<%=request.getContextPath() %>/static/front/images/logo.jpg" style="width: 224px; height:173px; -webkit-box-shadow: 2px 7px 8px #444243; border-radius: 5%;" /></a>
 				</div>
 				<div class="Index_top_1_1_2">
 					<div class="Index_top_1_2_1">
@@ -243,7 +243,7 @@
 			</ul>
 		</div>
 		<!-- 使用div设置背景图片 -->
-		<div id="bg" style="position:absolute; width:100%; height:100%; left:0px; top:0px;z-index:-20">
+		<div id="bg" style="position:absolute; width:100%; height:100%; left:0px; top:0px;z-index:-99">
 			<img style="position: fixed; width:100%; height:100%;" src="<%=request.getContextPath() %>/static/front/images/bjtp-loss.jpg"></img>
 		</div>
 	</body>
