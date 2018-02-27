@@ -87,41 +87,37 @@
 		
 		<div class="genius_xdex_1">
 			<div class="genius_index">
-				<!--优势1-->
 				<div class="genius_index_1">
 					<ul>
 						<li id="li-first">
-							<a href="#">
+							<a href="<%=request.getContextPath() %>/article?type=brand">
 							</a>
 						</li>
 					</ul>
 				</div>
 
-				<!--优势1-->
 				<div class="genius_index_1">
 					<ul>
 						<li id="li-second">
-							<a href="#">
+							<a href="<%=request.getContextPath() %>/article?type=activity">
 							</a>
 						</li>
 					</ul>
 				</div>
 					
-				<!--优势1-->
 				<div class="genius_index_1">
 					<ul>
 						<li id="li-third">
-							<a href="#">
+							<a href="<%=request.getContextPath() %>/article?type=design">
 							</a>
 						</li>
 					</ul>
 				</div>
 
-				<!--优势1-->
 				<div class="genius_index_1">
 					<ul>
 						<li id="li-fourth">
-							<a href="#">
+							<a href="<%=request.getContextPath() %>/article?type=video">
 							</a>
 						</li>
 					</ul>
