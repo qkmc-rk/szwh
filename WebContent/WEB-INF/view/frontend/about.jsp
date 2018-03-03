@@ -34,7 +34,7 @@
 								<a href="<%=request.getContextPath() %>/index"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />首页<i style="font-weight: 700;">HOME</i></a>
 							</li>
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/about" class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />关于<i style="font-weight: 700;">ABOUT</i></a>
+								<a href="<%=request.getContextPath() %>/about" class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />关于<i">ABOUT</i></a>
 							</li>
 							<li class="off">
 								<a href="<%=request.getContextPath() %>/service"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />服务<i style="font-weight: 700;">SERVICE</i></a>

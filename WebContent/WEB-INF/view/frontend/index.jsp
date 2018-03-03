@@ -32,7 +32,7 @@
 						<ul>
 							<!--导航-->
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/index"  class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />首页<i style="font-weight: 700;">HOME</i></a>
+								<a href="<%=request.getContextPath() %>/index"  class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />首页<i>HOME</i></a>
 							</li>
 							<li class="off">
 								<a href="<%=request.getContextPath() %>/about"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />关于<i style="font-weight: 700;">ABOUT</i></a>

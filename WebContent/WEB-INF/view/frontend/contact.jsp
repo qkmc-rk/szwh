@@ -43,7 +43,7 @@
 								<a href="<%=request.getContextPath() %>/article"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />案例<i style="font-weight: 700;">CASE</i></a>
 							</li>
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/contact"  class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />联系<i style="font-weight: 700;">CONTACT</i></a>
+								<a href="<%=request.getContextPath() %>/contact"  class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />联系<i>CONTACT</i></a>
 							</li>
 							<!--导航-->
 						</ul>
