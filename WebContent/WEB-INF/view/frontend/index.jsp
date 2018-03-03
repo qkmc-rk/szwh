@@ -330,9 +330,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-xs-6" style="padding: 0;">
-					<div class="genius_index8_2">
-						<div class="genius_index8_2_img" style="position: absolute; z-index: -1; height: 100%; width: 100%; background-color:rgb(48,48,48)">
-						</div>
+					<div class="genius_index8_2" style="background-color:rgb(48,48,48)">
 						<div class="genius_index8_2_letters">
 							<p style="font-size: 24px;">为您服务：028-85120685</p>
 							<p style="font-size: 24px;">服务时间：周一至周五8：30-18：00</p>
