@@ -27,11 +27,20 @@ body{
 	padding:0px; 
 	visibility:hidden;
 	display:block;
-	}
+}
 
+#topcall{
+	width:100%;
+	background-color:rgb(204,204,204);
+}
+#callpic{
+	width:12%;
+	float:right;
+	margin-right:100px;
+}
 .Index_top_1{width:100%;margin:0 auto;}
 .Index_top_1_1{
-	width:1033px;margin:0 auto;min-height:117px; _height:117px;height:auto;overflow:hidden;
+	width:1257px;margin:0 auto;min-height:117px; _height:117px;height:auto;overflow:hidden;
 	
 	
 }
@@ -39,7 +48,7 @@ body{
 .Index_top_1_1_1{height:173px; float:left;color:#D0D0D0; font-size:14px;line-height:173px; width:230px; text-align:left;margin-bottom:-173px;position:absolute; z-index:9999;}
 
 
-.Index_top_1_1_2{ color:#ffffff; font-size:14px;float:right;text-align:right; width:702px;border-left:1px solid #E6E6E6;}
+.Index_top_1_1_2{ color:#ffffff; font-size:14px;float:right;text-align:right; width:945px;border-left:1px solid #E6E6E6;}
 
 
 
@@ -47,20 +56,20 @@ body{
 
 
 .Index_top_1_2_1 ul{margin:0 auto;}
-.Index_top_1_2_1 li{height:117px; width:130px;line-height:117px;font-size:12px;color:#ffffff;float:left; border-right:1px solid #E6E6E6;}
+.Index_top_1_2_1 li{height:117px; width:188px;line-height:117px;font-size:12px;color:#ffffff;float:left; border-right:1px solid #E6E6E6;}
 
-.Index_top_1_2_1 li a{color:#4E4D4C;height:100%;line-height:28px;font-size:14px;display:block;width:130px; text-align:center; padding-top:37px;
+.Index_top_1_2_1 li a{color:#4E4D4C;height:100%;line-height:28px;font-size:14px;display:block;width:100%; text-align:center; padding-top:37px;
 }
 .Index_top_1_2_1 li a:hover{height:100%;line-height:28px;font-size:14px;color:#ffffff;text-decoration:none;display:block;background:url(../images/navon.png)  no-repeat left -0px;width:130px;}
 
-.Index_top_1_2_1 .off  a:hover{height:100%;line-height:28px;font-size:14px;color:#ffffff;text-decoration:none;display:block;width:130px;}
+.Index_top_1_2_1 .off  a:hover{height:100%;line-height:28px;font-size:14px;color:#ffffff;text-decoration:none;display:block;width:100%;}
 .Index_top_1_2_1 .off span{line-height:22px;font-size:14px;text-decoration:none;display:block;}
 
 
-.Index_top_1_2_1 .on {color:#ffffff;background:url(../images/navon.png) no-repeat;width:130px; text-align:center; padding-top:37px;
+.Index_top_1_2_1 .on {color:#ffffff;background:url(../images/navon.png) no-repeat;width:100%; text-align:center; padding-top:37px;
 	height: 100%;
 }
-.Index_top_1_2_1 .on a{color:#ffffff;width:116px;}
+.Index_top_1_2_1 .on a{color:#ffffff;width:100%;}
 
 
 

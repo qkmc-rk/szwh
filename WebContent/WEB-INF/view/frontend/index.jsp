@@ -15,11 +15,19 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/static/front/css/top_jquery.jslides.css" media="screen" />
 		<script src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
+		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/public.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	</head>
 
 	<body>
+		<!--顶部电话显示栏  -->
+		<div id="topcall">
+			<div id="callpic">
+				<img src="<%=request.getContextPath() %>/static/front/images/call.png" style="width:100%;padding-top:8%"></img>
+			</div>
+		</div>
 		<!--/*头部加入收藏*/-->
 		<div class="Index_top_1">
 			<div class="Index_top_1_1">

@@ -25,7 +25,12 @@
 	</head>
 
 	<body>
-
+		<!--顶部电话显示栏  -->
+		<div id="topcall">
+			<div id="callpic">
+				<img src="<%=request.getContextPath() %>/static/front/images/call.png" style="width:100%;padding-top:8%"></img>
+			</div>
+		</div>
 		<!--/*头部加入收藏*/-->
 		<div class="Index_top_1">
 			<div class="Index_top_1_1">
