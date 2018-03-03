@@ -92,12 +92,12 @@ body{
 .header_1 a{ color:#5D5D5B;line-height:45px;height:45px; font-size:26px;}
 .header_1 a:hover{color:#9E0301;line-height:45px;height:45px;}
 
-.genius_xdex_1{width:100%;margin:0 auto;min-height:182px; _height:182px;height:auto;overflow:hidden;/*padding-top:58px;*/}
-.genius_index{width:573px;margin:0 auto;height:130px;}
+.genius_xdex_1{width:100%;margin:0 auto;height:auto;overflow:hidden;/*padding-top:58px;*/}
+.genius_index{width:745px;margin:0 auto;height:130px;}
 .genius_index img{
 	width: 100px;
 }
-.genius_index_1{float:left; width:135px;height:130px;}
+.genius_index_1{float:left; width:186px;height:130px;}
 .genius_index_1 ul{margin:0 auto;}
 .genius_index_1 li span{}
 
@@ -114,12 +114,12 @@ body{
 	background-image: url(../images/ys_1.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 67%;
+	background-size: 58%;
 }
 .genius_index_1 li a:hover{
 	height:130px;line-height:38px;font-size:16px;color:#EB5C24;text-decoration:none;display:block;
 	background-image: url(../images/ys_1_on.png);
-	background-size: 67%;
+	background-size: 58%;
 }
 .genius_index_1 .on {height:130px;line-height:38px;font-size:16px;color:#EB5C24;text-decoration:none;display:block;}
 .genius_index_1 .on a{color:#EB5C24;}
