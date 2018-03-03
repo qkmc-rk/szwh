@@ -138,7 +138,7 @@
 							</div>
 						</div>
 
-						<div class="content_txt" style="width:600px; max-width:100%; margin:auto;">
+						<div class="content_txt" style="width:100%; max-width:100%; margin:auto;">
 
 							<font id="Zoom" style="line-height:1.5em;">
 								${case1.content}
