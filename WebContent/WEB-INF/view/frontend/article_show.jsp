@@ -14,6 +14,8 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/static/front/css/bootstrap/bootstrap.min.css"/>
 		<script src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
+		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/public.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
@@ -132,7 +134,6 @@
 									<span>点击次数：<font id="CCdiv">${case1.click}</font><script language="JavaScript" type="text/javascript">
    ClickCount("CCdiv/news/226/11");
   </script></span>
-									<span>【字体：<a href="javascript://" onClick="Zoom.style.fontSize='18px';">大</a>&nbsp;&nbsp;<a href="javascript://" onClick="Zoom.style.fontSize='16px';">中</a>&nbsp;&nbsp;<a href="javascript://" onClick="Zoom.style.fontSize='14px';">小</a>】</span>
 								</p>
 							</div>
 						</div>

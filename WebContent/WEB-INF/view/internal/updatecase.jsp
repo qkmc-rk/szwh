@@ -103,10 +103,27 @@
 		    </div>
 		    <div id="content" style="display:none;" value="">${case1.content}</div>
 		    <button class="btn btn-primary" onclick="update()">更新案列</button>
+		    <input style="display:none" type="hidden" id="contextPath" value="<%= request.getContextPath()%>" />
 		     <script type="text/javascript">
 		        var E = window.wangEditor;
 		        var editor = new E('#editor');
 		        // 或者 var editor = new E( document.getElementById('editor') );
+		        var rootPath = $('#contextPath').val();
+				editor.customConfig.uploadImgServer = rootPath + "/upload/uploadimg";
+				editor.customConfig.uploadFileName = "img";
+				editor.customConfig.uploadImgHooks = {
+						customInsert : function(insertImg, result, editor) {
+							var url = (window.location.href).split("/szwh")[0] + rootPath
+									+ result.data[0];
+							// alert(url);
+							insertImg(url);
+						},
+						fail : function(xhr, editor, result) {
+							if (result.errno == -1) {
+								alert("服务器没有接收到图片信息!");
+							}
+						}
+					}
 		        editor.create();
 		        var content = $("#content").html();
 		       // alert(content);

@@ -87,7 +87,7 @@
 					<input class="form-control type="text" name="origin" id="origin" value="手足文化" disabled="disabled" />
 				</div><br />
 			</div>
-			<input type="hidden" id="contextPath" value="<%= request.getContextPath()%>" />
+			<input style="display:none" type="hidden" id="contextPath" value="<%= request.getContextPath()%>" />
 		    <div id="editor">
 		        <p>在这里键入 <b>案列详情内容</b></p>
 		        <p style="color:orange">(提示:为美观起见,可尽量将内容居中)</p> 

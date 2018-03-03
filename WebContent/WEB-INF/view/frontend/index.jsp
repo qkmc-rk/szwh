@@ -40,19 +40,19 @@
 						<ul>
 							<!--导航-->
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/index"  class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />首页<i>HOME</i></a>
+								<a href="<%=request.getContextPath() %>/index"  class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />首页&nbsp;<i style="font-family:AvantGarde md bt">HOME</i></a>
 							</li>
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/about"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />关于<i style="font-weight: 700;">ABOUT</i></a>
+								<a href="<%=request.getContextPath() %>/about"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />关于&nbsp;<i style="font-weight: 400;font-family:AvantGarde md bt">ABOUT</i></a>
 							</li>
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/service"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />服务<i style="font-weight: 700;">SERVICE</i></a>
+								<a href="<%=request.getContextPath() %>/service"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />服务&nbsp;<i style="font-weight: 400;font-family:AvantGarde md bt">SERVICE</i></a>
 							</li>
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/article"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />案例<i style="font-weight: 700;">CASE</i></a>
+								<a href="<%=request.getContextPath() %>/article"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />案例&nbsp;<i style="font-weight: 400;font-family:AvantGarde md bt">CASE</i></a>
 							</li>
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/contact"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />联系<i style="font-weight: 700;">CONTACT</i></a>
+								<a href="<%=request.getContextPath() %>/contact"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />联系&nbsp;<i style="font-weight: 400;font-family:AvantGarde md bt">CONTACT</i></a>
 							</li>
 							<!--导航-->
 						</ul>
@@ -142,7 +142,7 @@
 
 			<div class="genius_index2_1">
 				<div class="genius_index2_1_1">
-					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>案例 </span>CASES</li>
+					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>案例 </span><i style="font-family:AvantGarde md bt">CASES</i></li>
 				</div>
 			</div>
 			<div class="genius_index2_2">
@@ -222,7 +222,7 @@
 		<div class="genius_index2">
 			<div class="genius_index2_1">
 				<div class="genius_index2_1_1">
-					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>经典客户 </span>CLASSIC CUSTOMER</li>
+					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>经典客户 </span><i style="font-family:AvantGarde md bt">CLASSIC CUSTOMER</i></li>
 				</div>
 			</div>
 			<div class="genius_index2_2">
@@ -262,7 +262,7 @@
 		<div class="genius_index2">
 			<div class="genius_index2_1">
 				<div class="genius_index2_1_1">
-					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>关于我们 </span>ABOUT US</li>
+					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>关于 </span><i style="font-family:AvantGarde md bt">ABOUT</i></li>
 				</div>
 			</div>
 			<div class="genius_index2_2">
@@ -271,18 +271,16 @@
 		</div>
 		<div class="genius_index6">
 			<div class="genius_index6_1">
-				<img src="<%=request.getContextPath() %>/static/front/images/sub_6.jpg" style="height: 266px; width: 100%;"/>
+				<img src="<%=request.getContextPath() %>/static/front/images/cxytx.jpg" style="height: 266px; width: 100%;"/>
 			</div>
 		</div>
 		<div class="genius_index6">
-			<div class="genius_index6_1" style="background-color: rgba(0,0,0,0); font-size: 30px; text-indent:2em;">
+			<div class="genius_index6_1" style="background-color: rgba(0,0,0,0); font-size: 36px; text-indent:2em; font-family:SimSun; letter-spacing:6px">
 				<p>成都手足文化有限公司创立于1998年，是一家以会展服务、品牌策划、礼品开发服务为一体的专业广告营销服务机构。</p>
 				
 				<p>公司一直秉承“用设计感动生活，用品质赢得客户，用口碑塑造品牌”的服务理念，赢得了客户的认同。</p>
 				
-				<p>多年来，我们深耕银行保险行业，与国内多家机构建立了长期的、广泛的合作，深谙其行业的特点和理念，成功策划了诸多经典案例。
-				我们拥有一批专业化、职业化且具有创新精神的团队。除了具备多年的行业经验，还结合公司在营销策划、媒体传播、行业人脉、市场研究等领域的资源优势，使会展活动更具市场影响力。
-				</p>
+				<p>多年来，我们深耕银行保险行业，与国内多家机构建立了长期的、广泛的合作，深谙其行业的特点和理念，成功策划了诸多经典案例。</p>
 				
 			</div>
 		</div>
@@ -291,16 +289,16 @@
 		<div class="genius_index2">
 			<div class="genius_index2_1">
 				<div class="genius_index2_1_1">
-					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>服务 </span>SERVICE</li>
+					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>服务 </span><i style="font-family:AvantGarde md bt">SERVICE</i></li>
 				</div>
 			</div>
 			<div class="genius_index2_2">
-				<li>我们是谁？ Who are we?</li>
+				<li>我们的力量! Our Power!</li>
 			</div>
 		</div>
 		<div class="genius_index6">
 			<div class="genius_index6_1" style="background-color: rgba(0,0,0,0); font-size: 20px; text-indent:2em;width: 100%; overflow: initial;">
-				<img src="<%=request.getContextPath() %>/static/front/images/5dyx.png" style="width: 1024px; display: block; margin: auto;"/>
+				<img src="<%=request.getContextPath() %>/static/front/images/5dyx.png" style="width: 983px; display: block; margin: auto;"/>
 			</div>
 		</div>
 		<!--/.服务-->
@@ -308,7 +306,7 @@
 		<div class="genius_index2">
 			<div class="genius_index2_1">
 				<div class="genius_index2_1_1">
-					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>联系我们 </span>CONTACT US</li>
+					<li><img src="<%=request.getContextPath() %>/static/front/images/search2.png" style="width: 70px;"/><span>联系我们 </span><i style="font-family:AvantGarde md bt">CONTACT US</i></li>
 				</div>
 			</div>
 			<div class="genius_index2_2">
@@ -325,9 +323,9 @@
 							<img src="<%=request.getContextPath() %>/static/front/images/opacity_logo.png" style="width: 200px;"/>
 						</div>
 						<div class="genius_index8_1_letters">
-							<p style="font-size: 18px;">成都市高新区永丰路20号附1号大中华办公楼</p>
-							<p style="font-size: 12px;">DAZHONGHUA OFFICE BUILDING, NO. 20, YONGFENG ROAD.</p>
-							<p style="font-size: 12px;">HIGH-TECH ZONE, CHENGDU</p>
+							<p style="font-size: 24px;">成都市高新区永丰路20号附1号大中华办公楼</p>
+							<p style="font-size: 15px;">DAZHONGHUA OFFICE BUILDING, NO. 20, YONGFENG ROAD.</p>
+							<p style="font-size: 15px;">HIGH-TECH ZONE, CHENGDU</p>
 						</div>
 					</div>
 				</div>
@@ -337,8 +335,8 @@
 							<img src="<%=request.getContextPath() %>/static/front/images/fwsj.jpg"/ style="height: 100%; width: 100%;">
 						</div>
 						<div class="genius_index8_2_letters">
-							<p>为您服务：028-85120685</p>
-							<p>服务时间：周一至周五8：30-18：00</p>
+							<p style="font-size: 24px;">为您服务：028-85120685</p>
+							<p style="font-size: 24px;">服务时间：周一至周五8：30-18：00</p>
 						</div>
 					</div>
 				</div>

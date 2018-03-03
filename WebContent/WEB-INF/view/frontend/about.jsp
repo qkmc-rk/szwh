@@ -12,6 +12,8 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/static/front/css/bootstrap/bootstrap-theme.min.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/static/front/css/bootstrap/bootstrap.min.css"/>
 		<script src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/public.js"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -72,7 +74,7 @@
 
 		<div class="cls"></div>
 
-		<div style=" width:100%;margin-top:30px; margin-bottom:20px;border-bottom:3px solid #C9C9C9;">
+		<div style=" width:100%;margin-bottom:50px;border-bottom:3px solid #C9C9C9;">
 			<div class="genius_index" style="padding-bottom:10px;width:540px;">
 			</div>
 		</div>
@@ -84,7 +86,7 @@
 			<div class="y_index_nyi">
 
 				<!--content部分-->
-				<div class="row" style="max-width: 1933px; margin: auto;">
+				<div class="row" style="max-width: 1933px; margin: 0 0 75px 0;">
 					<div class="col-lg-6 col-md-6 col-xs-6">
 						<img src="<%=request.getContextPath() %>/static/front/images/rssz.png" style="display:block;width: 300px; margin:auto; margin-top: 60px;" />
 					</div>
