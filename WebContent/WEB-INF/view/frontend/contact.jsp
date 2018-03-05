@@ -70,8 +70,8 @@
 		<!--/*头部加入收藏*/-->
 
 		<div class="cls"></div>
-		<div class="sperate">
-			<hr style="height: 0px; border: solid 5px darkgray; margin-top: 70px;" />
+		<div class="sperate" style="max-width:1920px; margin:auto;">
+			<hr style="height: 0px; border: solid 5px darkgray; margin-top: 240px;"/>
 		</div>
 		<div class="cls"></div>
 

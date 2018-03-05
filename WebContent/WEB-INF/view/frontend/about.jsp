@@ -74,9 +74,8 @@
 
 		<div class="cls"></div>
 
-		<div style=" width:100%;margin-bottom:50px;border-bottom:3px solid #C9C9C9;">
-			<div class="genius_index" style="padding-bottom:10px;width:540px;">
-			</div>
+		<div class="sperate" style="max-width:1920px; margin:auto;">
+			<hr style="height: 0px; border: solid 5px darkgray; margin-top: 240px;"/>
 		</div>
 
 		<div class="cls"></div>
@@ -86,7 +85,7 @@
 			<div class="y_index_nyi">
 
 				<!--content部分-->
-				<div class="row" style="max-width: 1933px; margin: 0 0 75px 0;">
+				<div class="row" style="max-width: 1933px; margin: 0 auto 75px auto;">
 					<div class="col-lg-6 col-md-6 col-xs-6">
 						<img src="<%=request.getContextPath() %>/static/front/images/rssz.png" style="display:block;width: 300px; margin:auto; margin-top: 60px;" />
 					</div>
@@ -124,7 +123,7 @@
 				</div>
 				<div class="row" style="height: 379px;max-width: 1933px; margin: auto;">
 					<div class="col-lg-12 col-md-12 col-xs-12">
-						<img src="<%=request.getContextPath() %>/static/front/images/aboutfootpic2.png" style="width: 100%;">
+						<img src="<%=request.getContextPath() %>/static/front/images/aboutfootpic2.png" style="width: 102%; margin-left:-20px;">
 					</div>
 				</div>
 				

@@ -70,10 +70,10 @@
 
 		<div class="cls"></div>
 
-		<div style=" width:100%;margin-top:30px; margin-bottom:20px;border-bottom:3px solid #C9C9C9;">
+		<!-- <div style=" width:100%;margin-top:30px; margin-bottom:20px;border-bottom:3px solid #C9C9C9;">
 			<div class="genius_index" style="padding-bottom:10px;">
 
-				<!--<div class="genius_index_1">
+				<div class="genius_index_1">
 					<ul>
 						<li class="">
 							<a href="Article.html">
@@ -107,8 +107,11 @@
 							</a>
 						</li>
 					</ul>
-				</div>-->
+				</div>
 			</div>
+		</div> -->
+		<div class="sperate" style="max-width:1920px; margin:auto;">
+			<hr style="height: 0px; border: solid 5px darkgray; margin-top: 240px;"/>
 		</div>
 
 		<div class="cls"></div>
@@ -125,9 +128,9 @@
 
 						<div class="biaoti_div">
 
-							<h3 class="articles">${case1.title}</h3>
+							<h2 style="font-size:30px;" class="articles">${case1.title}</h2>
 
-							<div id="about_proInfo_0">
+							<%-- <div id="about_proInfo_0">
 								<p class="laiyuan">
 									<span>${case1.origin}</span>
 									<span>${case1.date}</span>
@@ -135,7 +138,7 @@
    ClickCount("CCdiv/news/226/11");
   </script></span>
 								</p>
-							</div>
+							</div> --%>
 						</div>
 
 						<div class="content_txt" style="width:100%; max-width:100%; margin:auto;">

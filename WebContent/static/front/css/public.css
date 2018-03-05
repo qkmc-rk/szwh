@@ -229,7 +229,7 @@ body{
 /* footer */
 
 
-.footer{background-color: black;width:100%;height:80px;margin:0 auto; z-index:10;color:#B5B5B5;}
+.footer{background-color: black;width:100%;height:80px;margin:0 auto; z-index:10;color:#B5B5B5;max-width:1920px;}
 .footer ul{width:95%;margin:auto;}
 .footer_0{text-align:right;color:white;height:48px;border-top:solid 1px red;}
 .footer_0 a{color:white;line-height:48px; font-size:12px;height:48px; margin-left:10px; margin-right:10px;}
@@ -413,12 +413,12 @@ body{
 .y_indexi_1_5{height:33px;width:3px;float:right;background:url(../ximages/y_indexi_1_5.jpg) repeat-x;font-size:0px;}
 
 .y_indexi_2{
-	margin: 150px 0 200px 0;
+	margin: 0 0 200px 0;
 	width: 100%;
 	height: 900px;
 }
 .y_indexi_2_img{
-	width: 1070px;
+	width: 983px;
 	margin: 0 auto;
 }
 

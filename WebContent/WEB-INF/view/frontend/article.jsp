@@ -76,8 +76,8 @@
 		</div>
 		<!--/*头部加入收藏*/-->
 
-		<div class="sperate">
-			<hr style="height: 0px; border: solid 5px darkgray; margin-top: 70px;" />
+		<div class="sperate" style="max-width:1920px; margin:auto;">
+			<hr style="height: 0px; border: solid 5px darkgray; margin-top: 240px;"/>
 		</div>
 		<div class="y_index_ny">
 
@@ -102,7 +102,7 @@
 							<ul class="sc2_n">
 								<c:forEach var="case1" items="${page.list }" varStatus="status" >
 									<li>
-										<a href="<%=request.getContextPath() %>/article_show?id=${case1.id}"><img id="case${status.index }" src="" alt="中国人寿双养签约仪式新闻发布会" /><span></span>
+										<a href="<%=request.getContextPath() %>/article_show?id=${case1.id}"><img style="border-radius:8px;" id="case${status.index }" src="" alt="中国人寿双养签约仪式新闻发布会" /><span style="border-radius:8px;"></span>
 											<h3>${case1.title}</h3>
 										</a>
 									</li>

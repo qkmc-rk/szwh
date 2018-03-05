@@ -134,7 +134,7 @@
 			</div>
 		</div>
 		<div class="cls"></div>
-		<div class="sperate">
+		<div class="sperate" style="max-width:1920px; margin:auto;">
 			<hr style="height: 0px; border: solid 5px darkgray; margin-top: 70px;"/>
 		</div>
 		<div class="cls"></div>
