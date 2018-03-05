@@ -140,6 +140,7 @@ public class FrontendController {
 			page.setList(list);*/
 			//2.返回
 			mdv.addObject("page", page);
+			System.out.println(page.getList());
 			mdv.setViewName("/frontend/article");
 		}else {
 			mdv.addObject("message","没有获取到分页所在的列表信息");

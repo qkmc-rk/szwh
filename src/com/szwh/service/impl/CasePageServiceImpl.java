@@ -31,14 +31,14 @@ public class CasePageServiceImpl implements CasePageService {
 		if(fromIndex + page.getPageRowNum() < cases.size())
 			toIndex = fromIndex + page.getPageRowNum();
 		else
-			toIndex = cases.size() - 1;
+			toIndex = cases.size();
 		
 		//判断当前页的合理性
-		System.out.println(totalPage);
+		//System.out.println(totalPage);
 		if(currentPage < 1 || currentPage > totalPage)
 			return null;
 		List<Case> currentPageList = cases.subList(fromIndex, toIndex);
-		
+		//System.out.println(currentPageList);
 		//该设置page的属性了.
 		page.setCurrentPage(currentPage);
 		page.setList(currentPageList);
