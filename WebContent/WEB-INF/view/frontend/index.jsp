@@ -234,25 +234,25 @@
 		<div class="genius_index6">
 			<div class="genius_index6_1">
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/314445437.png" alt="中国人寿" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgrs.png" alt="中国人寿" /></li>
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/albxjt.png" alt="albxjt" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgpa.png" alt="albxjt" /></li>
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/fdsm.png" alt="fdsm" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgsh.png" alt="fdsm" /></li>
 
 				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/tpybx.png" alt="tpybx" /></li>
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgdx.png" alt="zgdx" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgrmbx.png" alt="zgdx" /></li>
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgsh.png" alt="zgsh" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/albxjt.png" alt="zgsh" /></li>
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgsh.png" alt="zgsh" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/htbx.png" alt="zgsh" /></li>
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgdx.png" alt="zgdx" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgyh.png" alt="zgdx" /></li>
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgsh.png" alt="zgsh" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/fdsmrs.png" alt="zgsh" /></li>
 
-				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/fdsm.png" alt="zgsh" /></li>
+				<li><img src="<%=request.getContextPath() %>/static/front/uploadfile/zgdx.png" alt="zgsh" /></li>
 
 			</div>
 		</div>
