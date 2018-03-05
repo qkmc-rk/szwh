@@ -61,3 +61,4 @@ www.cdszwh.com
 - 更改幕图g_1
 - 修改导航栏英文斜体加粗
 - 修改合作者logo
+- 导航栏case变为cases复数形式.

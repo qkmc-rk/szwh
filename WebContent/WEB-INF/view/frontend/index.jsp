@@ -49,7 +49,7 @@
 								<a href="<%=request.getContextPath() %>/service"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />服务&nbsp;<i style="font-weight: 400;font-family:AvantGarde md bt"><b>SERVICE</b></i></a>
 							</li>
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/article"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />案例&nbsp;<i style="font-weight: 400;font-family:AvantGarde md bt"><b>CASE</b></i></a>
+								<a href="<%=request.getContextPath() %>/article"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />案例&nbsp;<i style="font-weight: 400;font-family:AvantGarde md bt"><b>CASES</b></i></a>
 							</li>
 							<li class="off">
 								<a href="<%=request.getContextPath() %>/contact"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />联系&nbsp;<i style="font-weight: 400;font-family:AvantGarde md bt"><b>CONTACT</b></i></a>
