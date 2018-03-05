@@ -39,9 +39,10 @@ body{
 	background-color:rgb(204,204,204);
 }
 #callpic{
-	width:12%;
+	width:15%;
 	float:right;
 	margin-right:100px;
+	padding-top:10px;
 }
 .Index_top_1{width:100%;margin:0 auto;}
 .Index_top_1_1{
@@ -50,9 +51,8 @@ body{
 	
 }
 
-.Index_top_1_1_1{height:173px; float:left;color:#D0D0D0; font-size:14px;line-height:173px; width:230px; text-align:left;margin-bottom:-173px;position:absolute; z-index:9999;}
-
-
+.Index_top_1_1_1{height:173px; float:left;color:#D0D0D0; font-size:14px;line-height:173px; width:230px; text-align:left;margin-bottom:-173px;position:absolute; z-index:9999;
+}
 .Index_top_1_1_2{ color:#ffffff; font-size:14px;float:right;text-align:right; width:945px;border-left:1px solid #E6E6E6;}
 
 

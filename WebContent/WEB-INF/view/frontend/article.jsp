@@ -30,15 +30,15 @@
 		<!--顶部电话显示栏  -->
 		<div id="topcall">
 			<div id="callpic">
-				<img src="<%=request.getContextPath() %>/static/front/images/call.png" style="width:100%;padding-top:8%"></img>
-			</div>
+				<img src="<%=request.getContextPath() %>/static/front/images/call.png" style="width:15px;"></img><span>&nbsp;<b></>联系电话:<i>028-</b><b style="font-size:20px">85120685</b></i></span>
+ 			</div>
 		</div>
 		<!--/*头部加入收藏*/-->
 		<div class="Index_top_1">
 			<div class="Index_top_1_1">
 
 				<div class="Index_top_1_1_1">
-					<a href="<%=request.getContextPath() %>/index"><img src="<%=request.getContextPath() %>/static/front/images/logo.jpg" style="width: 224px; height:173px; -webkit-box-shadow: 2px 7px 8px #444243; border-radius: 5%;" /></a>
+					<a href="<%=request.getContextPath() %>/index"><img class="logoimg" src="<%=request.getContextPath() %>/static/front/images/logo.jpg" style="width: 224px; height:173px; -webkit-box-shadow: 2px 7px 8px #444243; border-radius: 5%;" /></a>
 				</div>
 				<div class="Index_top_1_1_2">
 					<div class="Index_top_1_2_1">
