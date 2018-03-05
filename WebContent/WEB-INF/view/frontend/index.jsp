@@ -216,7 +216,7 @@
 			</div>
 		</div>
 		<div class="genius_index3">
-			<li><a href="<%=request.getContextPath() %>/article_show"><img src="<%=request.getContextPath() %>/static/front/images/more.png"></a></li>
+			<li><a href="<%=request.getContextPath() %>/article"><img src="<%=request.getContextPath() %>/static/front/images/more.png"></a></li>
 		</div>
 
 		<div class="genius_index2">
