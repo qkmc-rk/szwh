@@ -64,3 +64,7 @@ www.cdszwh.com
 - 导航栏case变为cases复数形式.
 - logo鼠标移入变色
 - 顶部电话改为文字而不是图片
+
+### 版本2.3
+- 时间:2018-2-7
+- 页面增加meta标签<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />,以增强兼容性

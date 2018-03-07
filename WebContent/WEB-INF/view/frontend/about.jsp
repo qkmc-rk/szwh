@@ -6,6 +6,8 @@
 	<head>
 		<title>关于</title>
 		<meta name="keywords" content="营销策划、媒体传播、行业人脉、市场研究" />
+		<!--对于IE8使用最新的内核渲染页面,以解决部分兼容性问题  -->
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 		<meta name="description" content="成都手足文化有限公司创立于1998年，是一家以会展服务、品牌策划、礼品开发服务为一体的专业广告营销服务机构" />
 		<link href="<%=request.getContextPath() %>/static/front/css/global.css" rel="stylesheet" type="text/css">
 		<link href="<%=request.getContextPath() %>/static/front/css/public.css" rel="stylesheet" type="text/css">
