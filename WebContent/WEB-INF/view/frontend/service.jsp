@@ -6,6 +6,7 @@
 	<head>
 		<title>服务</title>
 		<meta name="keywords" content="营销策划、媒体传播、行业人脉、市场研究" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<!--对于IE8使用最新的内核渲染页面,以解决部分兼容性问题  -->
 		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 		<meta name="description" content="成都手足文化有限公司创立于1998年，是一家以会展服务、品牌策划、礼品开发服务为一体的专业广告营销服务机构" />
@@ -13,11 +14,8 @@
 		<link href="<%=request.getContextPath() %>/static/front/css/public.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/static/front/css/bootstrap/bootstrap-theme.min.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/static/front/css/bootstrap/bootstrap.min.css"/>
-		<script src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
-		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
-		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js"></script>
-		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/public.js"></script>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		
 
 	</head>
 
@@ -159,5 +157,9 @@
 		<div id="bg" style="position:absolute; width:100%; height:100%; left:0px; top:0px;z-index:-99">
 			<img style="position: fixed;  width:100%; height:100%;" src="<%=request.getContextPath() %>/static/front/images/bjtp-loss.jpg"></img>
 		</div>
+		<script src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
+		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/public.js"></script>
 	</body>
 </html>
