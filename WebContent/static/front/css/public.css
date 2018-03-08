@@ -39,10 +39,16 @@ body{
 	background-color:rgb(204,204,204);
 }
 #callpic{
+	position:relative;
+	
 	width:20%;
+	height:30px;
+	line-height:30px;
+	
+	top:50%;
+	transform:translateY(-50%);
 	float:right;
 	margin-right:100px;
-	padding-top:5px;
 }
 
 .logoimg{
