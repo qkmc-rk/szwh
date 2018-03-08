@@ -32,7 +32,7 @@
 			<div class="Index_top_1_1">
 
 				<div class="Index_top_1_1_1">
-					<a href="<%=request.getContextPath() %>/index"><img class="logoimg" src="<%=request.getContextPath() %>/static/front/images/logo.jpg" style="width: 224px; height:173px; -webkit-box-shadow: 2px 7px 8px #444243; border-radius: 5%;" /></a>
+					<a href="<%=request.getContextPath() %>/index"><img class="logoimg" src="<%=request.getContextPath() %>/static/front/images/logo.jpg"  /></a>
 				</div>
 				<div class="Index_top_1_1_2">
 					<div class="Index_top_1_2_1">

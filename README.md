@@ -69,3 +69,6 @@ www.cdszwh.com
 - 时间:2018-2-7/2-8
 - 页面增加meta标签<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />,以增强兼容性
 - 修复首页ys一栏hover时图片消失的BUG.并优化此栏加载速度.
+- 首页服务部分字体改为黑体
+- 修复兼容模式下主页上案列部分字体不居中的问题
+- 修复兼容模式下logo图片没有圆角和阴影的问题

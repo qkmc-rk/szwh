@@ -44,6 +44,19 @@ body{
 	margin-right:100px;
 	padding-top:5px;
 }
+
+.logoimg{
+	width: 224px; 
+	height:173px; 
+	-webkit-box-shadow: 2px 7px 8px #444243;
+	-moz-box-shadow:2px 7px 8px #444243;
+	box-shadow: 2px 7px 8px #444243; 
+	-webkit-border-radius: 5%;
+	-moz-border-radius: 5%;
+	border-radius: 5%;
+}
+
+
 .Index_top_1{width:100%;margin:0 auto;}
 .Index_top_1_1{
 	width:1257px;margin:0 auto;min-height:117px; _height:117px;height:auto;overflow:hidden;
@@ -268,14 +281,17 @@ body{
 .genius_i{width:1267px;margin:0 auto;padding-top:10px;}
 .bd{overflow:hidden}
 .sc2{padding:0 0 20px;overflow:hidden;width:100%;}
-.sc2 li{float:left;width:392px;margin:15px 15px 15px 15px;display:inline}
+.sc2 li{float:left;width:392px;margin:15px 15px 30px 15px;display:inline}
 .sc2 li a{color:#111;display:block;zoom:1.26}
 .sc2 li a:hover{color:#E11A2F;text-decoration:none;}
 .sc2 li img{width:310px;height:230px;display:block;background:#fff url(../images/load.gif) no-repeat center center;border-radius:20px}
 .sc2 li p{font-size:9px;-webkit-text-size-adjust:none;line-height:8px;_line-height:9px;height:9px;background:url(../images/ico_t.png) no-repeat;padding-left:6px;margin-top:8px;color:#fff}
 .sc2 li a:hover p{background-position:-310px 0;color:#fff}
 .sc2 li h3{height:20px;line-height:20px;overflow:hidden;cursor:pointer; text-align:center;font-weight:300; padding-left:6px;
-	font-size: 18px;
+	font-size: 14px;
+	width:80%;
+	float:left;
+
 }
 .sc2 a span{width:310px;height:234px;cursor:pointer;float:left;margin:-230px 0 0;position:relative;border-radius:20px}
 .sc2 a:hover span{background:url(../images/index_on.png) no-repeat -310px 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src = '../images/i20_2.png', sizingMethod = 'scale')}

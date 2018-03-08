@@ -35,7 +35,7 @@
 			<div class="Index_top_1_1">
 
 				<div class="Index_top_1_1_1">
-					<a href="<%=request.getContextPath() %>/index"><img class="logoimg" src="<%=request.getContextPath() %>/static/front/images/logo.jpg" style="width: 224px; height:173px; -webkit-box-shadow: 2px 7px 8px #444243; border-radius: 5%;" /></a>
+					<a href="<%=request.getContextPath() %>/index"><img class="logoimg" src="<%=request.getContextPath() %>/static/front/images/logo.jpg" /></a>
 				</div>
 				<div class="Index_top_1_1_2">
 					<div class="Index_top_1_2_1">
@@ -277,7 +277,7 @@
 			</div>
 		</div>
 		<div class="genius_index6">
-			<div class="genius_index6_1" style="background-color: rgba(0,0,0,0); font-size: 24px; text-indent:2em; font-family:SimSun; letter-spacing:6px">
+			<div class="genius_index6_1" style="background-color: rgba(0,0,0,0); font-size: 24px; text-indent:2em; font-family:SimHei; letter-spacing:6px">
 				<p>成都手足文化有限公司创立于1998年，是一家以会展服务、品牌策划、礼品开发服务为一体的专业广告营销服务机构。</p>
 				
 				<p>公司一直秉承“用设计感动生活，用品质赢得客户，用口碑塑造品牌”的服务理念，赢得了客户的认同。</p>
