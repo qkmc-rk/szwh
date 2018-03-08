@@ -117,44 +117,52 @@ body{
 
 .genius_index_1 li a{
 	color:#707070;height:130px;line-height:38px;font-size:16px;display:block;text-align:center;
-	background-image: url(../images/ys_1.png);
+	/* background-image: url(../images/ys_all.png); */
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 58%;
+	/* background-size: 58%; */
 }
 .genius_index_1 li a:hover{
 	height:130px;line-height:38px;font-size:16px;color:#EB5C24;text-decoration:none;display:block;
-	background-image: url(../images/ys_1_on.png);
-	background-size: 58%;
+	/* background-image: url(../images/ys_all.png); */
+	/* background-size: 58%; */
 }
 .genius_index_1 .on {height:130px;line-height:38px;font-size:16px;color:#EB5C24;text-decoration:none;display:block;}
 .genius_index_1 .on a{color:#EB5C24;}
 
 
 #li-first a{
-	background-image: url(../images/ys_1.png);
+	background-image: url(../images/ys_all.png);
+	background-position:41px;
 }
 #li-second a{
-	background-image: url(../images/ys_2.png);
+	background-image: url(../images/ys_all.png);
+	background-position:-267px;
 }
 #li-third a{
-	background-image: url(../images/ys_3.png);
+	background-image: url(../images/ys_all.png);
+	background-position:-586px;
 }
 #li-fourth a{
-	background-image: url(../images/ys_4.png);
+	background-image: url(../images/ys_all.png);
+	background-position:-905px;
 }
 
 #li-first a:hover{
-	background-image: url(../images/ys_1_on.png);
+	background-image: url(../images/ys_all.png);
+	background-position:-116px;
 }
 #li-second a:hover{
-	background-image: url(../images/ys_2_on.png);
+	background-image: url(../images/ys_all.png);
+	background-position:-425px;
 }
 #li-third a:hover{
-	background-image: url(../images/ys_3_on.png);
+	background-image: url(../images/ys_all.png);
+	background-position:-743px;
 }
 #li-fourth a:hover{
-	background-image: url(../images/ys_4_on.png);
+	background-image: url(../images/ys_all.png);
+	background-position:-1062px;
 }
 
 

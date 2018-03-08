@@ -66,5 +66,6 @@ www.cdszwh.com
 - 顶部电话改为文字而不是图片
 
 ### 版本2.3
-- 时间:2018-2-7
+- 时间:2018-2-7/2-8
 - 页面增加meta标签<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />,以增强兼容性
+- 修复首页ys一栏hover时图片消失的BUG.并优化此栏加载速度.
