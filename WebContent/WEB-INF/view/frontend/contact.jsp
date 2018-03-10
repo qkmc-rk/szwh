@@ -44,7 +44,7 @@
 								<a href="<%=request.getContextPath() %>/service"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />服务<i style="font-weight: 700;"><b>SERVICE</b></i></a>
 							</li>
 							<li class="off">
-								<a href="<%=request.getContextPath() %>/article"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />案例<i style="font-weight: 700;"><b>CASE</b></i></a>
+								<a href="<%=request.getContextPath() %>/article"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />案例<i style="font-weight: 700;"><b>CASES</b></i></a>
 							</li>
 							<li class="off">
 								<a href="<%=request.getContextPath() %>/contact"  class="on"><img src="<%=request.getContextPath() %>/static/front/images/search.png" style="width: 18px;" />联系<i>CONTACT</i></a>

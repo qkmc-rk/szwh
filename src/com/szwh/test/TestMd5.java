@@ -8,7 +8,7 @@ public class TestMd5 {
 	
 	@Test
 	public void testMd5() {
-		String password = "1314520";
+		String password = "sz123456";
 		System.out.println("after encoding-->" + AppMD5Util.MD5(password));
 		System.out.println("after encoding with salt-->" + AppMD5Util.md5Password(password));
 	}
