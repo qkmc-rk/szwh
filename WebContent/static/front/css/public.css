@@ -316,8 +316,8 @@ body{
 .sc2_n li h3{height:20px;line-height:20px;overflow:hidden;cursor:pointer; text-align:center;font-weight:300; padding-left:6px;
 	font-size: 18px;
 }
-.sc2_n a span{width:310px;height:234px;background:url(../images/index_off.png) no-repeat;cursor:pointer;float:left;margin:-230px 0 0;position:relative}
-.sc2_n a:hover span{background:url(../images/index_on.png) no-repeat -310px 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src = '../images/i20_2.png', sizingMethod = 'scale')}
+.sc2_n a span{width:310px;height:230px;cursor:pointer;float:left;margin:-230px 0 0;position:relative}
+.sc2_n a:hover span{background:url(../images/index_on.png) no-repeat -323px 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src = '../images/i20_2.png', sizingMethod = 'scale')}
 
 
 

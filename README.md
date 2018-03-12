@@ -79,3 +79,4 @@ www.cdszwh.com
 - 时间:2018-3-10
 - 修复页面上CASE不是复数的bug
 -修复首页案例hover遮盖不完整的BUG.
+- 修复案列页面hover不是圆角的问题
