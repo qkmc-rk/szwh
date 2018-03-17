@@ -10,7 +10,8 @@ editor.customConfig.debug = true;
 // 事件函数,修改相对路径
 editor.customConfig.uploadImgHooks = {
 	customInsert : function(insertImg, result, editor) {
-		var url = (window.location.href).split("/szwh")[0] + rootPath
+		/*var url = (window.location.href).split("/szwh")[0] + rootPath*/ //if xxx/szwh
+		var url = (window.location.href).split("/")[0] + rootPath
 				+ result.data[0];
 		// alert(url);
 		insertImg(url);
@@ -35,7 +36,10 @@ function uploadHtml() {
 	var type = $("#type").val();
 	var origin = $("#origin").val();
 	var content = getHtml();
-	console.log(editor + title + type + origin + content);
+	
+	/*console.log(editor + title + type + origin + content);*/
+	origin = "手足文化";
+	
 	$.ajax({
 		url : rootPath + "/case/add",
 		dataType : "json",
