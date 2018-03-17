@@ -95,13 +95,13 @@
 							<ul class="sc2_n">
 								<c:forEach var="case1" items="${page.list }" varStatus="status" >
 									<li>
-										<a href="<%=request.getContextPath() %>/article_show?id=${case1.id}"><img id="case${status.index }" src="" alt="中国人寿双养签约仪式新闻发布会" /><span style="border-radius:18px;"></span>
+										<a href="<%=request.getContextPath() %>/article_show?id=${case1.id}"><img id="case${status.index }" src="<%=request.getContextPath() %>/static/uploadfile/${case1.cover}" alt="中国人寿双养签约仪式新闻发布会" /><span style="border-radius:18px;"></span>
 											<h3 style="font-weight: 700;">${case1.title}</h3>
 										</a>
 									</li>
-									<div style="display: none" id="case_${status.index }">
+									<%-- <div style="display: none" id="case_${status.index }">
 										${case1.content}
-									</div>
+									</div> --%>
 								</c:forEach>
 							</ul>
 						</div>
@@ -109,13 +109,13 @@
 						<div id="pagger" style="text-align: center">
 							<div style="width:100%;float:left;">
 								<span>共${page.totalPage }页，当前为第${page.currentPage }页，每页${page.pageRowNum }条，合计${page.totalRowNum }条</span>
-								<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=1">首页</a>
+								<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article_activity?currentPage=1">首页</a>
 								
 								<c:if test="${page.currentPage == 1  }">
-									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=1">上一页</a>
+									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article_activity?currentPage=1">上一页</a>
 								</c:if>
 								<c:if test="${page.currentPage > 1  }">
-									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=${page.currentPage - 1}">上一页</a>
+									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article_activity?currentPage=${page.currentPage - 1}">上一页</a>
 								</c:if>
 								
 								<c:forEach varStatus="status" begin="1" end="${page.totalPage }">
@@ -123,7 +123,7 @@
 										<span style="margin-right:5px;font-weight:Bold;color:red;">${page.currentPage}</span>
 									</c:if>
 									<c:if test="${page.currentPage != status.index && status.index <= 5}">
-										<a href="<%=request.getContextPath() %>/article?currentPage=${status.index}" style="margin-right:5px;">${status.index}</a>
+										<a href="<%=request.getContextPath() %>/article_activity?currentPage=${status.index}" style="margin-right:5px;">${status.index}</a>
 									</c:if>
 									<c:if test="${status.index == 6}">
 										<span style="margin-right:5px;font-weight:Bold;color:black;">...</span>
@@ -131,13 +131,13 @@
 								</c:forEach>
 								
 								<c:if test="${page.currentPage == page.totalPage  }">
-									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=${page.totalPage}">下一页</a>
+									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article_activity?currentPage=${page.totalPage}">下一页</a>
 								</c:if>
 								<c:if test="${page.currentPage < page.totalPage  }">
-									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=${page.currentPage + 1}">下一页</a>
+									<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article_activity?currentPage=${page.currentPage + 1}">下一页</a>
 								</c:if>
 								
-								<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article?currentPage=${page.totalPage}">尾页</a>&nbsp;&nbsp;转到
+								<a style="margin-right:5px;" href="<%=request.getContextPath() %>/article_activity?currentPage=${page.totalPage}">尾页</a>&nbsp;&nbsp;转到
 								
 								<select name="pagger_input" id="pagger_input" onchange="goToPage(this)">
 									<c:forEach varStatus="status" begin="1" end="${page.totalPage}">
@@ -234,11 +234,11 @@
 
 		<script type="text/javascript">
 			function goToPage(option){
-				window.location.href = "article?currentPage=" + $(option).val();
+				window.location.href = "article_activity?currentPage=" + $(option).val();
 			}
 		</script>
 		<!--偷懒写的js  -->
-		<script language="javascript" type="text/javascript">
+		<!-- <script language="javascript" type="text/javascript">
 			$(document).ready(function(){
 				$("#case_0 img").each(function(i){
 		   			//alert("no:"+"  src:"+$(this).attr("src"));
@@ -286,6 +286,6 @@
 		   			$("#case8").attr('src',$(this).attr("src"));
 		 		});
 			});
-		</script>
+		</script> -->
 	</body>
 </html>

@@ -90,3 +90,4 @@ www.cdszwh.com
 - 服务的五角图改为质量较高的图
 - 新增加一个页面  案列--客户页面
 - 新增三个页面 article design movie activity
+- 在数据库case添加cover字段,然后修改主页和案列的封面都从cover字段获取.

@@ -85,11 +85,15 @@ public class CaseController {
 			@RequestParam("title") String title,
 			@RequestParam("editor") Integer editor,
 			@RequestParam("origin") String origin,
-			@RequestParam("content") String content){
+			@RequestParam("content") String content,
+			@RequestParam("cover") String cover){
 		if(title == null || title.equals("") || editor == null || editor.equals("")
 				|| origin == null || origin.equals("") || content == null || content.equals("")) {
 			return JsonResult.RS_FALSE;
 		}
+		//默认封面
+		if(cover == null || cover.equals(""))
+			cover = "f.png";
 		Case case1 = new Case();
 		//赋值
 		case1.setClick(1);
@@ -99,6 +103,7 @@ public class CaseController {
 		case1.setOrigin(origin);
 		case1.setTitle(title);
 		case1.setType(type);
+		case1.setCover(cover);
 		//保存操作
 		System.out.println(case1);
 		if(caseService.saveOneCase(case1))
@@ -139,7 +144,8 @@ public class CaseController {
 			@RequestParam("title") String title,
 			@RequestParam("origin") String origin,
 			@RequestParam("content") String content,
-			@RequestParam("click")Integer click) {
+			@RequestParam("click")Integer click,
+			@RequestParam("cover")String cover) {
 		
 		//准备一个案列
 		if(title == null || title.equals("") 
@@ -147,6 +153,9 @@ public class CaseController {
 				|| click == null || id == null) {
 			return JsonResult.RS_FALSE;
 		}
+		//默认封面
+		if(cover == null || cover.equals(""))
+			cover = "f.png";
 		Case case1 = new Case();
 		//赋值
 		

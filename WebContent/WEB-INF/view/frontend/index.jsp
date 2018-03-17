@@ -156,7 +156,7 @@
 		<div class="cls"></div>
 
 		<div class="genius_i">
-			<div style="display: none;" id="cases0content">
+			<%-- <div style="display: none;" id="cases0content">
 				${cases[0].content}
 			</div>
 			<div style="display: none;" id="cases1content">
@@ -173,42 +173,42 @@
 			</div>
 			<div style="display: none;" id="cases5content">
 				${cases[5].content}
-			</div>
+			</div> --%>
 			<div class="bd">
 				<ul class="sc2">
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show?id=${cases[0].id}"><img id="case0" src="" alt="${cases[0].title}" /><span></span>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[0].id}"><img id="case0" src="<%=request.getContextPath() %>/static/uploadfile/${cases[0].cover }" alt="${cases[0].title}" /><span></span>
 							<h3>${cases[0].title}</h3>
 						</a>
 					</li>
 					
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show?id=${cases[1].id}"><img id="case1" src="" alt="${cases[1].title}" /><span></span>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[1].id}"><img id="case1" src="<%=request.getContextPath() %>/static/uploadfile/${cases[1].cover }" alt="${cases[1].title}" /><span></span>
 							<h3>${cases[1].title}</h3>
 						</a>
 					</li>
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show?id=${cases[2].id}"><img id="case2" src="" alt="${cases[2].title}" /><span></span>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[2].id}"><img id="case2" src="<%=request.getContextPath() %>/static/uploadfile/${cases[2].cover }" alt="${cases[2].title}" /><span></span>
 							<h3>${cases[2].title}</h3>
 						</a>
 					</li>
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show?id=${cases[3].id}"><img id="case3" src="" alt="${cases[3].title}" /><span></span>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[3].id}"><img id="case3" src="<%=request.getContextPath() %>/static/uploadfile/${cases[3].cover }" alt="${cases[3].title}" /><span></span>
 							<h3>${cases[3].title}</h3>
 						</a>
 					</li>
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show?id=${cases[4].id}"><img id="case4" src="" alt="${cases[4].title}" /><span></span>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[4].id}"><img id="case4" src="<%=request.getContextPath() %>/static/uploadfile/${cases[4].cover }" alt="${cases[4].title}" /><span></span>
 							<h3>${cases[4].title}</h3>
 						</a>
 					</li>
 
 					<li>
-						<a href="<%=request.getContextPath() %>/article_show?id=${cases[5].id}"><img id="case5" src="" alt="${cases[5].title}" /><span></span>
+						<a href="<%=request.getContextPath() %>/article_show?id=${cases[5].id}"><img id="case5" src="<%=request.getContextPath() %>/static/uploadfile/${cases[5].cover }" alt="${cases[5].title}" /><span></span>
 							<h3>${cases[5].title}</h3>
 						</a>
 					</li>
@@ -381,7 +381,7 @@
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/public.js"></script>
 		<!--此处的js代码用于替换案例中的图片的src内容  -->
-		<script language="javascript" type="text/javascript">
+		<!-- <script language="javascript" type="text/javascript">
 			$(document).ready(function(){
 				$("#cases0content img").each(function(i){
 		   			//alert("no:"+"  src:"+$(this).attr("src"));
@@ -414,7 +414,7 @@
 		   			$("#case5").attr('src',$(this).attr("src"));
 		 		});
 			});
-		</script>
+		</script> -->
 
 	</body>
 

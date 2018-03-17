@@ -16,8 +16,14 @@ public class Case {
 	private Timestamp date;
 	private Integer click;
 	private String content;
+	private String cover;
 	
-	
+	public String getCover() {
+		return cover;
+	}
+	public void setCover(String cover) {
+		this.cover = cover;
+	}
 	//getters and setters
 	public Integer getId() {
 		return id;

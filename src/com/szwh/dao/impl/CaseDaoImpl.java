@@ -23,10 +23,10 @@ public class CaseDaoImpl implements CaseDao {
 	
 	@Override
 	public Integer insert(Case mycase) {
-		String sql = "insert into t_case(type,title,editor,origin,date,click,content)values(?,?,?,?,?,?,?)";
+		String sql = "insert into t_case(type,title,editor,origin,date,click,content,cover)values(?,?,?,?,?,?,?,?)";
 		Integer rs = jdbcTemplate.update(sql,mycase.getType(), mycase.getTitle(),
 				mycase.getEditor(),mycase.getOrigin(),mycase.getDate(),
-				mycase.getClick(),mycase.getContent());
+				mycase.getClick(),mycase.getContent(),mycase.getCover());
 		return rs;
 	}
 
@@ -90,8 +90,8 @@ public class CaseDaoImpl implements CaseDao {
 
 	@Override
 	public Integer update(Case case1) {
-		String sql = "update t_case set title=?,type=?,click=?,origin=?,content=? where id=?";
-		Integer rs = jdbcTemplate.update(sql,case1.getTitle(),case1.getType(),case1.getClick(),case1.getOrigin(),case1.getContent(),case1.getId());
+		String sql = "update t_case set title=?,type=?,click=?,origin=?,content=?,cover=? where id=?";
+		Integer rs = jdbcTemplate.update(sql,case1.getTitle(),case1.getType(),case1.getClick(),case1.getOrigin(),case1.getContent(),case1.getCover(),case1.getId());
 		return rs;
 	}
 
@@ -114,6 +114,7 @@ public class CaseDaoImpl implements CaseDao {
 					mycase.setDate(rs.getTimestamp(6));
 					mycase.setClick(rs.getInt(7));
 					mycase.setContent(rs.getString(8));
+					mycase.setCover(rs.getString(9));
 					list.add(mycase);
 				}while(rs.next());
 				return list;
@@ -142,6 +143,7 @@ public class CaseDaoImpl implements CaseDao {
 					mycase.setDate(rs.getTimestamp(6));
 					mycase.setClick(rs.getInt(7));
 					mycase.setContent(rs.getString(8));
+					mycase.setCover(rs.getString(9));
 					list.add(mycase);
 				}while(rs.next());
 				return list;

@@ -95,13 +95,13 @@
 							<ul class="sc2_n">
 								<c:forEach var="case1" items="${page.list }" varStatus="status" >
 									<li>
-										<a href="<%=request.getContextPath() %>/article_show?id=${case1.id}"><img id="case${status.index }" src="" alt="中国人寿双养签约仪式新闻发布会" /><span style="border-radius:18px;"></span>
+										<a href="<%=request.getContextPath() %>/article_show?id=${case1.id}"><img id="case${status.index }" src="<%=request.getContextPath() %>/static/uploadfile/${case1.cover}" alt="中国人寿双养签约仪式新闻发布会" /><span style="border-radius:18px;"></span>
 											<h3 style="font-weight: 700;">${case1.title}</h3>
 										</a>
 									</li>
-									<div style="display: none" id="case_${status.index }">
+									<%-- <div style="display: none" id="case_${status.index }">
 										${case1.content}
-									</div>
+									</div> --%>
 								</c:forEach>
 							</ul>
 						</div>
@@ -238,7 +238,7 @@
 			}
 		</script>
 		<!--偷懒写的js  -->
-		<script language="javascript" type="text/javascript">
+		<!-- <script language="javascript" type="text/javascript">
 			$(document).ready(function(){
 				$("#case_0 img").each(function(i){
 		   			//alert("no:"+"  src:"+$(this).attr("src"));
@@ -286,6 +286,6 @@
 		   			$("#case8").attr('src',$(this).attr("src"));
 		 		});
 			});
-		</script>
+		</script> -->
 	</body>
 </html>

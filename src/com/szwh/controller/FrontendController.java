@@ -49,6 +49,7 @@ public class FrontendController {
 			cases = caseService.getAllCase();
 			if(cases != null) {
 				cases = cases.subList(start, end);
+				//System.out.println(cases);
 				mdv.addObject("cases", cases);
 				mdv.setViewName("/frontend/index");
 			}else {
@@ -61,6 +62,7 @@ public class FrontendController {
 			mdv.setViewName("/error");
 		}
 		//2.返回主页
+
 		return mdv;
 	}
 	
@@ -91,53 +93,6 @@ public class FrontendController {
 		//获取分页的Page
 		Page<Case> page = casePageService.getPage(currentPage);
 		if(page != null) {
-			
-			/*//1.根据type进行过滤一下
-			List<Case> list = page.getList();
-			Iterator<Case> i = list.iterator();
-			if(type != null) {
-				switch(type) {
-				
-				case "brand":{
-					while(i.hasNext()) {
-						Case c = (Case) i.next();
-						if(!c.getType().equals("brand")) {
-							i.remove();
-						}
-					}
-				}
-				break;
-				case "activity":{
-					while(i.hasNext()) {
-						Case c = (Case) i.next();
-						if(!c.getType().equals("activity")) {
-							i.remove();
-						}
-					}
-				}
-				break;
-				case "design":{
-					while(i.hasNext()) {
-						Case c = (Case) i.next();
-						if(!c.getType().equals("design")) {
-							i.remove();
-						}
-					}
-				}
-				break;
-				case "movie":{
-					while(i.hasNext()) {
-						Case c = (Case) i.next();
-						if(!c.getType().equals("movie")) {
-							i.remove();
-						}
-					}
-				}
-				break;
-				}
-			}
-			//1.5删除完多余的设置一下在返回
-			page.setList(list);*/
 			//2.返回
 			mdv.addObject("page", page);
 			System.out.println(page.getList());
