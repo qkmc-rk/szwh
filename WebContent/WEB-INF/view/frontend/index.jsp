@@ -275,13 +275,8 @@
 			</div>
 		</div>
 		<div class="genius_index6">
-			<div class="genius_index6_1" style="background-color: rgba(0,0,0,0); font-size: 24px; text-indent:2em; font-family:SimHei; letter-spacing:6px">
-				<p>成都手足文化有限公司创立于1998年，是一家以会展服务、品牌策划、礼品开发服务为一体的专业广告营销服务机构。</p>
-				
-				<p>公司一直秉承“用设计感动生活，用品质赢得客户，用口碑塑造品牌”的服务理念，赢得了客户的认同。</p>
-				
-				<p>多年来，我们深耕银行保险行业，与国内多家机构建立了长期的、广泛的合作，深谙其行业的特点和理念，成功策划了诸多经典案例。</p>
-				
+			<div class="genius_index6_1" style="background-color: rgba(0,0,0,0);">
+				<img src="<%=request.getContextPath() %>/static/front/images/about_p.png" alt="关于-段落" style="width: 100%; height:100%;" />				
 			</div>
 		</div>
 		<!--/.关于我们-->

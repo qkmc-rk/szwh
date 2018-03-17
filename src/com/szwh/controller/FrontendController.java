@@ -211,4 +211,9 @@ public class FrontendController {
 		return "/frontend/about";
 	}
 	
+	@RequestMapping("/article_custom")
+	public String article_custom() {
+		return "/frontend/article_custom";
+	}
+	
 }

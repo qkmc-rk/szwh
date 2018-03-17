@@ -96,7 +96,7 @@
 								<c:forEach var="case1" items="${page.list }" varStatus="status" >
 									<li>
 										<a href="<%=request.getContextPath() %>/article_show?id=${case1.id}"><img id="case${status.index }" src="" alt="中国人寿双养签约仪式新闻发布会" /><span style="border-radius:18px;"></span>
-											<h3>${case1.title}</h3>
+											<h3 style="font-weight: 700;">${case1.title}</h3>
 										</a>
 									</li>
 									<div style="display: none" id="case_${status.index }">
