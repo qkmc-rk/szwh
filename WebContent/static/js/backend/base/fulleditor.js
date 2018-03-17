@@ -1,6 +1,5 @@
 var E = window.wangEditor;
 var editor = new E('#editor');
-// 或者 var editor = new E( document.getElementById('editor') );
 // 配置图片上传
 var rootPath = $('#contextPath').val();
 editor.customConfig.uploadImgServer = rootPath + "/upload/uploadimg";

@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.szwh.dao.CaseDao;
-import com.szwh.dao.CaseException;
 import com.szwh.entity.Case;
 
 @Repository("caseDao")
