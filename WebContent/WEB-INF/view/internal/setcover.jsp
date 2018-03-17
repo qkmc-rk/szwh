@@ -90,7 +90,7 @@
 				editor.customConfig.uploadImgServer = rootPath + "/upload/uploadcover";
 				editor.customConfig.uploadFileName = "cover";
 				editor.customConfig.uploadImgParams = {
-					    id:${case1.id}  //属性值会自动进行 encode ，此处无需 encode
+					    id:${ case1.id }  //属性值会自动进行 encode ，此处无需 encode
 					}
 				editor.customConfig.uploadImgHooks = {
 						customInsert : function(insertImg, result, editor) {
