@@ -143,12 +143,75 @@ public class FrontendController {
 			System.out.println(page.getList());
 			mdv.setViewName("/frontend/article");
 		}else {
-			mdv.addObject("message","没有获取到分页所在的列表信息");
+			mdv.addObject("message","没有获取到分页所在的列表信息 all");
 			mdv.setViewName("/error");
 		}
 		//将page装入model,返回
 		return mdv;
 	}
+	
+	@RequestMapping("/article_activity")
+	public ModelAndView article_activity(@RequestParam(value="type",required=false)String type,
+			Integer currentPage) {
+		
+		ModelAndView mdv = new ModelAndView();
+		if(currentPage == null) currentPage = 1;
+		type = "activity";
+		//获取分页的Page
+		Page<Case> page = casePageService.getPageByType(currentPage, type);
+		if(page != null) {
+			mdv.addObject("page", page);
+			System.out.println(page.getList());
+			mdv.setViewName("/frontend/article_activity");
+		}else {
+			mdv.addObject("message","没有获取到分页所在的列表信息 activity");
+			mdv.setViewName("/error");
+		}
+		//将page装入model,返回
+		return mdv;
+	}
+	@RequestMapping("/article_design")
+	public ModelAndView article_design(@RequestParam(value="type",required=false)String type,
+			Integer currentPage) {
+		
+		ModelAndView mdv = new ModelAndView();
+		if(currentPage == null) currentPage = 1;
+		type = "design";
+		//获取分页的Page
+		Page<Case> page = casePageService.getPageByType(currentPage, type);
+		if(page != null) {
+			mdv.addObject("page", page);
+			System.out.println(page.getList());
+			mdv.setViewName("/frontend/article_design");
+		}else {
+			mdv.addObject("message","没有获取到分页所在的列表信息 design");
+			mdv.setViewName("/error");
+		}
+		//将page装入model,返回
+		return mdv;
+	}
+	
+	@RequestMapping("/article_movie")
+	public ModelAndView article_movie(@RequestParam(value="type",required=false)String type,
+			Integer currentPage) {
+		
+		ModelAndView mdv = new ModelAndView();
+		if(currentPage == null) currentPage = 1;
+		type = "movie";
+		//获取分页的Page
+		Page<Case> page = casePageService.getPageByType(currentPage, type);
+		if(page != null) {
+			mdv.addObject("page", page);
+			System.out.println(page.getList());
+			mdv.setViewName("/frontend/article_movie");
+		}else {
+			mdv.addObject("message","没有获取到分页所在的列表信息 movie");
+			mdv.setViewName("/error");
+		}
+		//将page装入model,返回
+		return mdv;
+	}
+	
 	
 	@RequestMapping("/article_show")
 	public ModelAndView article_show(@RequestParam(value="id",required=false) Integer id) {

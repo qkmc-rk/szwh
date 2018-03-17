@@ -89,3 +89,4 @@ www.cdszwh.com
 - about进行大部分改变
 - 服务的五角图改为质量较高的图
 - 新增加一个页面  案列--客户页面
+- 新增三个页面 article design movie activity

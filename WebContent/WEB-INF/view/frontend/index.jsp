@@ -98,7 +98,7 @@
 				<div class="genius_index_1">
 					<ul>
 						<li id="li-first">
-							<a href="<%=request.getContextPath() %>/article?type=brand">
+							<a href="<%=request.getContextPath() %>/article_custom">
 							</a>
 						</li>
 					</ul>
@@ -107,7 +107,7 @@
 				<div class="genius_index_1">
 					<ul>
 						<li id="li-second">
-							<a href="<%=request.getContextPath() %>/article?type=activity">
+							<a href="<%=request.getContextPath() %>/article_activity">
 							</a>
 						</li>
 					</ul>
@@ -116,7 +116,7 @@
 				<div class="genius_index_1">
 					<ul>
 						<li id="li-third">
-							<a href="<%=request.getContextPath() %>/article?type=design">
+							<a href="<%=request.getContextPath() %>/article_design">
 							</a>
 						</li>
 					</ul>
@@ -125,7 +125,7 @@
 				<div class="genius_index_1">
 					<ul>
 						<li id="li-fourth">
-							<a href="<%=request.getContextPath() %>/article?type=movie">
+							<a href="<%=request.getContextPath() %>/article_movie">
 							</a>
 						</li>
 					</ul>

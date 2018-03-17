@@ -123,5 +123,33 @@ public class CaseDaoImpl implements CaseDao {
 		return cases;
 	}
 
+	@Override
+	public List<Case> selectByType(String type) {
+		String sql = "select * from t_case where type=?";
+		RowMapper<List<Case>> rowMapper = new RowMapper<List<Case>>() {
+
+			@Override
+			public List<Case> mapRow(ResultSet rs, int rowNum) throws SQLException {
+				List<Case> list = new ArrayList<>();
+				Case mycase = null;
+				do{
+					mycase = new Case();
+					mycase.setId(rs.getInt(1));
+					mycase.setType(rs.getString(2));
+					mycase.setTitle(rs.getString(3));
+					mycase.setEditor(rs.getInt(4));
+					mycase.setOrigin(rs.getString(5));
+					mycase.setDate(rs.getTimestamp(6));
+					mycase.setClick(rs.getInt(7));
+					mycase.setContent(rs.getString(8));
+					list.add(mycase);
+				}while(rs.next());
+				return list;
+			}
+		};
+		List<Case> cases = jdbcTemplate.queryForObject(sql, rowMapper,type);
+		return cases;
+	}
+
 	
 }

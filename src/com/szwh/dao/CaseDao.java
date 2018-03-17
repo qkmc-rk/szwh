@@ -37,6 +37,7 @@ public interface CaseDao {
 	
 	List<Case> selectAll();
 	
+	List<Case> selectByType(String type);
 	/**
 	 * 更新表中某一列的值+一个整数
 	 * @param colName 列名
@@ -58,4 +59,6 @@ public interface CaseDao {
 	 * @return 更新的记录条数
 	 */
 	Integer update(Case case1);
+	
+	
 }

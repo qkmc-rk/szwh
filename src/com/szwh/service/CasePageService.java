@@ -14,4 +14,6 @@ public interface CasePageService {
 	 * @return
 	 */
 	Page<Case> getPage(Integer currentPage);
+	
+	Page<Case> getPageByType(Integer currentPage,String type);
 }
