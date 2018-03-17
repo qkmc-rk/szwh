@@ -50,8 +50,8 @@
 				</div>
 				<div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
 					<ul class="nav menu">
-						<li><a href=""><span class="glyphicon glyphicon-sunglasses"></span> 查看案列</a></li>
-						<li class="active"><a href=""><span class="glyphicon glyphicon-shopping-cart"></span> 增加案列</a></li>
+						<li><a href="<%= request.getContextPath() %>/admin/showcase"><span class="glyphicon glyphicon-search"></span> 查看案列</a></li>
+						<li class="active"><a href="<%= request.getContextPath() %>/admin/edit"><span class="glyphicon glyphicon-plus"></span> 增加案列</a></li>
 					</ul>
 				</div>
 			</div>
