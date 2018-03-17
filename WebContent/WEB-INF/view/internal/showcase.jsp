@@ -73,6 +73,7 @@
 							<button id="deletebtn" class="btn btn-primary" disabled="disabled" data-toggle="modal" data-target="#deleteModal">删除</button>
 							<button id="updatebtn" class="btn btn-primary" disabled="disabled" onclick="toUpdate()">修改</button>
 							<button id="showbtn" class="btn btn-primary" onclick="showCase()" disabled="disabled">查看详细</button>
+							<button id="setcover" class="btn btn-primary" onclick="setcover()" disabled="disabled">设置封面</button>
 						</div>
 						<div class="panel-body">
 							<table id="casetable" data-toggle="table" data-single-select="true"	data-pagination="true" data-search="true" data-show-refresh="true">

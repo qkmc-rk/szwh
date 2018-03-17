@@ -109,6 +109,28 @@ public class AdminController {
 		return mdv;
 	}
 	
+	@RequestMapping("/setcover")
+	public ModelAndView setcoverpage(@RequestParam("id")Integer id) {
+		ModelAndView mdv = new ModelAndView();
+		if(id == null) {
+			mdv.setViewName("/error");
+			mdv.addObject("message", "没有id参数无法访问setcover页面");
+		}
+		//先通过id获取到案列内容
+		Case case1;
+		try {
+			case1 = caseService.selectOneCaseById(id);
+			mdv.addObject("case1", case1);
+			mdv.setViewName("/internal/setcover");
+		} catch (Exception e) {
+			mdv.setViewName("/error");
+			mdv.addObject("message", "没有找到对应ID的案列,你的操作为非法操作!");
+			e.printStackTrace();
+		}
+		
+		return mdv;
+	}
+	
 	/**
 	 * 后台进行操作时的转发操作,多个转发
 	 * @return

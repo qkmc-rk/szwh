@@ -45,4 +45,6 @@ public interface CaseService {
 	
 	Integer plusClick(Integer id, Integer plusNum);
 	
+	Integer updateCover(Integer id,String cover);
+	
 }

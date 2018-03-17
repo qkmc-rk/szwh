@@ -18,11 +18,13 @@ function closeBtns(){
 	$("#deletebtn").attr('disabled','disabled');
 	$("#updatebtn").attr('disabled','disabled');
 	$("#showbtn").attr('disabled','disabled');
+	$("#setcover").attr('disabled','disabled');
 }
 function openBtns(){
 	$('#deletebtn').removeAttr('disabled');
 	$('#updatebtn').removeAttr('disabled');
 	$('#showbtn').removeAttr('disabled');
+	$('#setcover').removeAttr('disabled');
 }
 
 
@@ -79,5 +81,11 @@ function toUpdate(){
 	var rows = $('#casetable').bootstrapTable('getSelections');
 	var id = $(rows).last()[0].id;
 	window.open("update?id=" + id);
+}
+//去修改页面
+function setcover(){
+	var rows = $('#casetable').bootstrapTable('getSelections');
+	var id = $(rows).last()[0].id;
+	window.open("setcover?id=" + id);
 }
 
