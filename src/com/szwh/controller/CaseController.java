@@ -144,8 +144,7 @@ public class CaseController {
 			@RequestParam("title") String title,
 			@RequestParam("origin") String origin,
 			@RequestParam("content") String content,
-			@RequestParam("click")Integer click,
-			@RequestParam("cover")String cover) {
+			@RequestParam("click")Integer click) {
 		
 		//准备一个案列
 		if(title == null || title.equals("") 
@@ -153,9 +152,6 @@ public class CaseController {
 				|| click == null || id == null) {
 			return JsonResult.RS_FALSE;
 		}
-		//默认封面
-		if(cover == null || cover.equals(""))
-			cover = "f.png";
 		Case case1 = new Case();
 		//赋值
 		
