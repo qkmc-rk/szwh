@@ -90,6 +90,12 @@ public class CaseDaoImpl implements CaseDao {
 
 	@Override
 	public Integer update(Case case1) {
+		String sql = "update t_case set title=?,type=?,click=?,origin=?,content=? where id=?";
+		Integer rs = jdbcTemplate.update(sql,case1.getTitle(),case1.getType(),case1.getClick(),case1.getOrigin(),case1.getContent(),case1.getId());
+		return rs;
+	}
+	@Override
+	public Integer updateWithCover(Case case1) {
 		String sql = "update t_case set title=?,type=?,click=?,origin=?,content=?,cover=? where id=?";
 		Integer rs = jdbcTemplate.update(sql,case1.getTitle(),case1.getType(),case1.getClick(),case1.getOrigin(),case1.getContent(),case1.getCover(),case1.getId());
 		return rs;

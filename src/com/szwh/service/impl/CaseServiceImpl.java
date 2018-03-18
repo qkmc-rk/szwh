@@ -65,6 +65,6 @@ public class CaseServiceImpl implements CaseService {
 		//2.设置cover后更新记录
 		case1.setCover(cover);
 		
-		return caseDao.update(case1);
+		return caseDao.updateWithCover(case1);
 	}
 }

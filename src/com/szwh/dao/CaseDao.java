@@ -59,6 +59,8 @@ public interface CaseDao {
 	 * @return 更新的记录条数
 	 */
 	Integer update(Case case1);
+
+	Integer updateWithCover(Case case1);
 	
 	
 }
