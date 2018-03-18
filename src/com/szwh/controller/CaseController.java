@@ -86,7 +86,7 @@ public class CaseController {
 			@RequestParam("editor") Integer editor,
 			@RequestParam("origin") String origin,
 			@RequestParam("content") String content,
-			@RequestParam("cover") String cover){
+			@RequestParam(value="cover",required=false) String cover){
 		if(title == null || title.equals("") || editor == null || editor.equals("")
 				|| origin == null || origin.equals("") || content == null || content.equals("")) {
 			return JsonResult.RS_FALSE;

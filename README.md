@@ -92,3 +92,5 @@ www.cdszwh.com
 - 新增三个页面 article design movie activity
 - 在数据库case添加cover字段,然后修改主页和案列的封面都从cover字段获取.
 - 增添设置封面功能页面(后台)
+- 2018-3-18
+- 修复网站根路径时上传出错的问题

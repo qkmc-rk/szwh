@@ -37,7 +37,7 @@ function uploadHtml() {
 	var origin = $("#origin").val();
 	var content = getHtml();
 	
-	/*console.log(editor + title + type + origin + content);*/
+	console.log(editor+ "   ----"  + title+ "   ----" + type+ "   ----" + origin+ "   ----" + content);
 	origin = "手足文化";
 	
 	$.ajax({
