@@ -113,7 +113,8 @@
 				editor.customConfig.uploadFileName = "img";
 				editor.customConfig.uploadImgHooks = {
 						customInsert : function(insertImg, result, editor) {
-							var url = (window.location.href).split("/szwh")[0] + rootPath
+							/* var url = (window.location.href).split("/szwh")[0] + rootPath */ // 如果不是根目录比如(if not root path) www.ruankun.xyz/szwh
+							var url = (window.location.href).split("/")[0] + rootPath
 									+ result.data[0];
 							// alert(url);
 							insertImg(url);
