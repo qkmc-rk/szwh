@@ -173,26 +173,34 @@ public class FrontendController {
 		ModelAndView mdv = new ModelAndView();
 		//1.通过id查询到案列
 		List<Case> cases = caseService.getAllCase();
+		
 		if(id == null) {
 			id = cases.get(0).getId();
 		}
-		Case case0,case1 = null,case2;
+		System.out.println("传入参数ID:" + id);
+		Case case0  = null,case1  = null,case2  = null;
 		//从list中获取指定id的记录.
 		for (Case cs : cases) {
-			if(cs.getId() == id) {
+			System.out.println("当前CASE的ID:" + cs.getId());
+			int ids = id.intValue();
+			int idz = cs.getId().intValue();
+			if(ids == idz) {
 				case1 = cs;
+				System.out.println("[DEBUG]->获取到  case1:" + case1);
 				break;
 			}
 		}
 		//从list中获取指定id的object的前一个.需要判断是否是第一个
 		if(cases.indexOf(case1)-1 >= 0 && null != cases.get(cases.indexOf(case1) - 1) ) {
 			case0 = cases.get(cases.indexOf(case1)-1);
+			System.out.println("[DEBUG]->获取 case0:" + case0);
 		}else {
 			case0 = null;
 		}
 		//从list中获取指定id的object的后一个,需要判断是否是最后一个
 		if(cases.indexOf(case1)+1 < cases.size() && null != cases.get(cases.indexOf(case1) + 1) ) {
 			case2 = cases.get(cases.indexOf(case1)+1);
+			System.out.println("[DEBUG]->获取到  case2:" + case2);
 		}else {
 			case2 = null;
 		}
@@ -204,7 +212,8 @@ public class FrontendController {
 			mdv.setViewName("/frontend/article_show");
 			//访问次数的增加由拦截器实现.
 			//...
-		}else {
+		}else { 
+			System.out.println(case0 + "    " + case1 + "   " + case2 + "  ");
 			mdv.addObject("message", "获取指定Id=" + id +"的案列时出现错误!");
 			mdv.setViewName("/error");
 		}

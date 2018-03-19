@@ -94,3 +94,5 @@ www.cdszwh.com
 - 增添设置封面功能页面(后台)
 - 2018-3-18
 - 修复网站根路径时上传出错的问题
+- 2018-3-19
+- 修复article_show的controller方法中因包装类型Integer而带来的漏洞
