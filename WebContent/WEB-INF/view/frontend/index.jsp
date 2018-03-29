@@ -372,49 +372,21 @@
 				</div>
 			</ul>
 		</div>
-		<!-- 使用div设置背景图片 -->
-		<div id="bg" style="position:absolute; width:100%; height:100%; left:0px; top:0px;z-index:-99">
-			<img style="position: fixed;  width:100%; height:100%;" src="<%=request.getContextPath() %>/static/front/images/bjtp-loss.jpg"></img>
+		<div class="loyalinfo" style="color:#fff;background-color:black;text-decoration: none;border-top:1px solid #fff; text-align:center;">
+			<li>Copyright<font style="font-family:Arial"> ©</font>&nbsp;2018&nbsp;&nbsp;手足（成都）有限公司&nbsp;版权所有&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/" target="_blank">蜀ICP备18006206号-1</a>
+				<span id="footer1_copyright" style="font-size:14px;">技术支持：<a href="mailto:qkmc@outlook.com" target="_blank">qkmc@outlook.com</a></span>
+			</li>
 		</div>
+		<!-- 使用div设置背景图片 -->
+		<%-- <div id="bg" style="position:absolute; width:100%; height:100%; left:0px; top:0px;z-index:-99">
+			<img style="position: fixed;  width:100%; height:100%;" src="<%=request.getContextPath() %>/static/front/images/bjtp-loss.jpg"></img>
+		</div> --%>
 		<script src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/public.js"></script>
 		<!--此处的js代码用于替换案例中的图片的src内容  -->
-		<!-- <script language="javascript" type="text/javascript">
-			$(document).ready(function(){
-				$("#cases0content img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case0").attr('src',$(this).attr("src"));
-		 		});
-				$("#cases1content img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case1").attr('src',$(this).attr("src"));
-		 		});
-				$("#cases2content img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case2").attr('src',$(this).attr("src"));
-		 		});
-				$("#cases3content img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case3").attr('src',$(this).attr("src"));
-		 		});
-				$("#cases4content img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case4").attr('src',$(this).attr("src"));
-		 		});
-				$("#cases5content img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case5").attr('src',$(this).attr("src"));
-		 		});
-			});
-		</script> -->
+
 
 	</body>
 

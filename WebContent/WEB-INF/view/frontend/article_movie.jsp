@@ -70,7 +70,7 @@
 		<!--/*头部加入收藏*/-->
 
 		<div class="sperate" style="max-width:1920px; margin:auto;">
-			<hr style="height: 0px; border: solid 5px darkgray; margin-top: 240px;"/>
+			<hr style="height: 0px; border: solid 5px darkgray; margin-top: 120px;"/>
 		</div>
 		<div class="y_index_ny">
 
@@ -223,9 +223,9 @@
 			</ul>
 		</div>
 		<!-- 使用div设置背景图片 -->
-		<div id="bg" style="position:absolute; width:100%; height:100%; left:0px; top:0px;z-index:-99">
+		<%-- <div id="bg" style="position:absolute; width:100%; height:100%; left:0px; top:0px;z-index:-99">
 			<img style="position: fixed;  width:100%; height:100%;" src="<%=request.getContextPath() %>/static/front/images/bjtp-loss.jpg"></img>
-		</div>
+		</div> --%>
 		<script src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/Inc/Search.js"></script>
 		<script language="JavaScript" type="text/javascript" src="<%=request.getContextPath() %>/static/front/js/jquery-1.11.1.min.js"></script>
@@ -237,55 +237,5 @@
 				window.location.href = "article_movie?currentPage=" + $(option).val();
 			}
 		</script>
-		<!--偷懒写的js  -->
-		<!-- <script language="javascript" type="text/javascript">
-			$(document).ready(function(){
-				$("#case_0 img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case0").attr('src',$(this).attr("src"));
-		 		});
-				$("#case_1 img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case1").attr('src',$(this).attr("src"));
-		 		});
-				$("#case_2 img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case2").attr('src',$(this).attr("src"));
-		 		});
-				$("#case_3 img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case3").attr('src',$(this).attr("src"));
-		 		});
-				$("#case_4 img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case4").attr('src',$(this).attr("src"));
-		 		});
-				$("#case_5 img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case5").attr('src',$(this).attr("src"));
-		 		});
-				$("#case_6 img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case6").attr('src',$(this).attr("src"));
-		 		});
-				$("#case_7 img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case7").attr('src',$(this).attr("src"));
-		 		});
-				$("#case_8 img").each(function(i){
-		   			//alert("no:"+"  src:"+$(this).attr("src"));
-		   			//替换某个img的src
-		   			$("#case8").attr('src',$(this).attr("src"));
-		 		});
-			});
-		</script> -->
 	</body>
 </html>
