@@ -190,11 +190,13 @@
 						<div class="qrcode">
 							<div class="weibo">
 								<div class="weibo_img">
+									<img alt="微博" src="<%=request.getContextPath() %>/static/front/images/wb.jpg" style="width:100%; height:100%;">
 								</div>
 								<p>手足官网微博</p>
 							</div>
 							<div class="wechat">
 								<div class="wechat_img">
+									<img alt="微博" src="<%=request.getContextPath() %>/static/front/images/wx.jpg" style="width:100%; height:100%;">
 								</div>
 								<p>手足官方微信</p>
 							</div>
@@ -221,6 +223,11 @@
 					<a href="<%=request.getContextPath() %>/contact">联系</a>
 				</div>
 			</ul>
+		</div>
+		<div class="loyalinfo" style="color:#fff;background-color:black;text-decoration: none;border-top:1px solid #fff; text-align:center;">
+			<li>Copyright<font style="font-family:Arial"> ©</font>&nbsp;2018&nbsp;&nbsp;手足（成都）有限公司&nbsp;版权所有&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/" target="_blank">蜀ICP备18006206号-1</a>
+				<span id="footer1_copyright" style="font-size:14px;">技术支持：<a href="mailto:qkmc@outlook.com" target="_blank">qkmc@outlook.com</a></span>
+			</li>
 		</div>
 		<!-- 使用div设置背景图片 -->
 		<%-- <div id="bg" style="position:absolute; width:100%; height:100%; left:0px; top:0px;z-index:-99">

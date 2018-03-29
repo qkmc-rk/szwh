@@ -340,11 +340,13 @@
 						<div class="qrcode">
 							<div class="weibo">
 								<div class="weibo_img">
+									<img alt="微博" src="<%=request.getContextPath() %>/static/front/images/wb.jpg" style="width:100%; height:100%;">
 								</div>
 								<p>手足官网微博</p>
 							</div>
 							<div class="wechat">
 								<div class="wechat_img">
+									<img alt="微博" src="<%=request.getContextPath() %>/static/front/images/wx.jpg" style="width:100%; height:100%;">
 								</div>
 								<p>手足官方微信</p>
 							</div>
