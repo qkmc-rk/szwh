@@ -87,21 +87,20 @@
 				<!--content部分-->
 				<div class="row" style="max-width: 1933px; margin: 0 auto 75px auto;">
 					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-md-offset-2">
-						<img src="<%=request.getContextPath() %>/static/front/images/cxytx.png" alt="诚信赢天下" style="width:100%">
+						<img src="<%=request.getContextPath() %>/static/front/images/cxytx2.png" alt="诚信赢天下" style="width:100%">
 					</div>
 					
 				</div>
-				<div class="row" style="max-width: 1933px; margin: auto;">
+				<%-- <div class="row" style="max-width: 1933px; margin: auto;">
 					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-md-offset-2">
 						<img src="<%=request.getContextPath() %>/static/front/images/szqywh.png" alt="手足企业文化" style="width:100%">
 					</div>
-				</div>
+				</div> --%>
 				<div class="row" style="height: 379px;max-width: 1933px; margin: auto;">
 					<div class="col-lg-12 col-md-12 col-xs-12">
 						<img src="<%=request.getContextPath() %>/static/front/images/aboutfootpic2.png" style="width: 102%; margin-left:-20px;">
 					</div>
 				</div>
-				
 			</div>
 		</div>
 		<div class=" cls "></div>

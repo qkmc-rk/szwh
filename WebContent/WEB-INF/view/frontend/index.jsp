@@ -271,14 +271,10 @@
 		</div>
 		<div class="genius_index6">
 			<div class="genius_index6_1">
-				<img src="<%=request.getContextPath() %>/static/front/images/cxytx.jpg" style="height: 266px; width: 100%;"/>
+				<img src="<%=request.getContextPath() %>/static/front/images/cxytxx.png" style="width: 100%;"/>
 			</div>
 		</div>
-		<div class="genius_index6">
-			<div class="genius_index6_1" style="background-color: rgba(0,0,0,0);">
-				<img src="<%=request.getContextPath() %>/static/front/images/about_p.png" alt="关于-段落" style="width: 100%; height:100%;" />				
-			</div>
-		</div>
+		
 		<!--/.关于我们-->
 		<!--服务-->
 		<div class="genius_index2">
